@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LexGrowth | Marketing Jurídico de Alto Impacto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" /> 
     <style>
         :root {
             --primary: #2c3e50;
-            --secondary: #e74c3c;
+            --secondary: #D49A36;
             --accent: #3498db;
             --light: #ecf0f1;
             --dark: #1a252f;
@@ -111,12 +112,32 @@
         
         /* Hero Section */
         .hero {
-            padding: 150px 0 100px;
+            position: relative;
+            padding: 10px 0 100px;
             background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
             color: white;
             text-align: center;
         }
-        
+        #intro{
+            box-shadow: 0px 0px 20px black;
+            border-radius: 20px;
+            width: 30%;
+            height: auto;
+        }
+        #back{
+            width: 100%;
+            display: flex;
+            position: absolute;
+            height: 100%;
+        }
+        .fundo-preto{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            z-index: 1;
+            background: #201e1ee1;
+        }
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
@@ -156,7 +177,10 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
         }
-        
+        .hero .container{
+            position: relative;
+            z-index: 2;
+        }
         /* Animação quando elementos estão visíveis */
         .animate {
             opacity: 1 !important;
@@ -394,7 +418,7 @@
             color: #bdc3c7;
             font-size: 14px;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -416,29 +440,58 @@
             .cta-box h2 {
                 font-size: 28px;
             }
+            .intro{
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="main-header">
-        <div class="container">
-            <nav>
-                <div class="logo">Lex<span>Growth</span></div>
-                <ul class="nav-links">
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#resultados">Resultados</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#cta" class="cta-btn">Consulta Grátis</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <!-- Hero Section -->
     <section class="hero">
+        <div class="fundo-preto"></div>
+            <video
+                style="background-color: transparent;"
+                id="back"
+                class="video-js"
+                controls
+                preload="auto"
+                width="70%"
+                height="auto"
+                poster="logo-video.png"
+                data-setup='{"controls": false}'
+                autoplay
+                muted
+                loop>
+                <source src="fundo.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>  
         <div class="container">
+            <video
+                style="background-color: transparent;"
+                id="intro"
+                class="video-js"
+                controls
+                preload="auto"
+                width="70%"
+                height="auto"
+                poster="logo-video.png"
+                data-setup="{}"
+                autoplay
+                muted
+            >
+                <source src="intro.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>      
+
             <h1 class="animate-on-scroll">Transforme seu Escritório Jurídico em uma Máquina de Captação de Clientes</h1>
             <p class="animate-on-scroll">Estratégias de marketing digital sob medida para advogados que desejam escalar seus resultados e se destacar no mercado competitivo.</p>
             <a href="#cta" class="hero-btn animate-on-scroll">Agende sua Consultoria Gratuita</a>
