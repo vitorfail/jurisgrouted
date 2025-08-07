@@ -112,6 +112,7 @@
         
         /* Hero Section */
         .hero {
+            overflow-y: hidden;
             position: relative;
             padding: 10px 0 100px;
             background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
@@ -138,7 +139,7 @@
             z-index: 1;
             background: #201e1ee1;
         }
-        .hero h1 {
+        h1 {
             font-size: 48px;
             margin-bottom: 20px;
             line-height: 1.2;
@@ -421,16 +422,28 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            #back{
+                width: inherit;
+            }
+            .hero{
+                padding: 0px 0px 100px;
+            }
+            .hero .container{
+                padding: 20px 20px;
+            }
+            #intro{
+                width: 80%;
+            }
             .nav-links {
                 display: none;
             }
             
-            .hero h1 {
-                font-size: 36px;
+            h1 {
+                font-size: 26px;
             }
             
             .hero p {
-                font-size: 18px;
+                font-size: 100%;
             }
             
             .cta-box {
@@ -480,7 +493,7 @@
                 width="70%"
                 height="auto"
                 poster="logo-video.png"
-                data-setup="{}"
+                data-setup='{"muted": false}''
                 autoplay
                 muted
             >
