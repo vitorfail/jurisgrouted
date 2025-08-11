@@ -21,7 +21,9 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+        i{
+            margin-right: 10px;
+        }
         body {
             background-color: var(--light);
             color: var(--dark);
@@ -33,7 +35,10 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+        .container img{
+            width: 37%;
+            height: auto;
+        }
         /* Header */
         header {
             background-color: white;
@@ -80,7 +85,9 @@
             display: flex;
             list-style: none;
         }
-        
+        a{
+            font-size: 25px;
+        }
         .nav-links li {
             margin-left: 30px;
         }
@@ -129,7 +136,6 @@
             width: 100%;
             display: flex;
             position: absolute;
-            height: 100%;
         }
         .fundo-preto{
             width: 100%;
@@ -162,7 +168,6 @@
             color: white;
             padding: 15px 30px;
             border-radius: 5px;
-            font-size: 18px;
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
@@ -333,7 +338,6 @@
         }
         
         .cta-box .hero-btn {
-            font-size: 16px;
             padding: 12px 25px;
             opacity: 0;
             transform: translateY(30px);
@@ -456,12 +460,19 @@
             .intro{
                 width: 90%;
             }
+            .container img{
+                width: 80%;
+            }
+            a{
+                font-size: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero">
+        <div id="themis"></div>
         <div class="fundo-preto"></div>
             <video
                 style="background-color: transparent;"
@@ -484,7 +495,7 @@
                 </p>
             </video>  
         <div class="container">
-            <video
+            <!--<video
                 style="background-color: transparent;"
                 id="intro"
                 class="video-js"
@@ -503,11 +514,12 @@
                     web browser that
                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                 </p>
-            </video>      
+            </video>-->
+            <img alt="Logo" src="logo.png" />      
 
             <h1 class="animate-on-scroll">Transforme seu Escritório Jurídico em uma Máquina de Captação de Clientes</h1>
             <p class="animate-on-scroll">Estratégias de marketing digital sob medida para advogados que desejam escalar seus resultados e se destacar no mercado competitivo.</p>
-            <a href="#cta" class="hero-btn animate-on-scroll">Agende sua Consultoria Gratuita</a>
+            <a href="#cta" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
         </div>
     </section>
 
@@ -599,7 +611,7 @@
             <div class="cta-box animate-on-scroll">
                 <h2 class="animate-on-scroll">Pronto para Transformar seu Escritório?</h2>
                 <p class="animate-on-scroll">Agende agora uma consultoria estratégica gratuita de 30 minutos com nossos especialistas em marketing jurídico. Vamos analisar seu caso e mostrar exatamente como podemos ajudar você a captar mais clientes com o melhor custo-benefício.</p>
-                <a href="#" class="hero-btn animate-on-scroll">Quero minha Consultoria Grátis</a>
+                <a href="#" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Quero minha Consultoria Grátis</a>
             </div>
         </div>
     </section>
@@ -650,11 +662,16 @@
             </div>
         </div>
     </footer>
-
-    <script>
+      <script type="module">
+        import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
+        // To allow for the camera to move around the scene
+        import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
+        // To allow for importing the .gltf file
         // Animação ao rolar a página
         document.addEventListener('DOMContentLoaded', function() {
             // Observador de elementos para animação
+            // Configuração inicial da cena
+            // Selecionar todos os elementos para animar
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -665,7 +682,6 @@
                 threshold: 0.1
             });
             
-            // Selecionar todos os elementos para animar
             const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
             elementsToAnimate.forEach(el => observer.observe(el));
             
