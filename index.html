@@ -210,11 +210,18 @@
             transform: translateX(0px);
             opacity: 0;
         }
-        .frase{
+        .frase1{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
+
+        }
+        .frase{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
         }
         .results .section-title h2{
             color: white;
@@ -467,6 +474,23 @@
         }
         /* Responsive */
         @media (max-width: 768px) {
+            .frase:nth-of-type(2){
+                display: none;
+            }
+            .frase1{
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+            }
+            .features-grid{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+            .features-grid .card{
+                width: 100%;
+                margin-top: 20px;
+            }
             #back{
                 width: inherit;
             }
@@ -601,29 +625,36 @@
     <section class="results" id="resultados">
         <div class="container">
             <div class="section-title">
-                <div class="frase">
-                    <h2 id="letra" style="--i:1">R</h2>
-                    <h2 id="letra" style="--i:2">e</h2>
-                    <h2 id="letra" style="--i:3">s</h2>
-                    <h2 id="letra" style="--i:4">u</h2>
-                    <h2 id="letra" style="--i:5">l</h2>
-                    <h2 id="letra" style="--i:6">t</h2>
-                    <h2 id="letra" style="--i:7">a</h2>
-                    <h2 id="letra" style="--i:8">d</h2>
-                    <h2 id="letra" style="--i:9">o</h2>
-                    <h2 id="letra" style="--i:10">s</h2>
-                    <h2 class="pular">8</h2>
-                    <h2 id="letra" style="--i:11">C</h2>
-                    <h2 id="letra" style="--i:12">o</h2>
-                    <h2 id="letra" style="--i:13">m</h2>
-                    <h2 id="letra" style="--i:14">p</h2>
-                    <h2 id="letra" style="--i:15">r</h2>
-                    <h2 id="letra" style="--i:16">o</h2>
-                    <h2 id="letra" style="--i:17">v</h2>
-                    <h2 id="letra" style="--i:18">a</h2>
-                    <h2 id="letra" style="--i:19">d</h2>
-                    <h2 id="letra" style="--i:20">o</h2>
-                    <h2 id="letra" style="--i:21">s</h2>
+                <div class="frase1">
+                    <div class="frase">
+                        <h2 id="letra" style="--i:1">R</h2>
+                        <h2 id="letra" style="--i:2">e</h2>
+                        <h2 id="letra" style="--i:3">s</h2>
+                        <h2 id="letra" style="--i:4">u</h2>
+                        <h2 id="letra" style="--i:5">l</h2>
+                        <h2 id="letra" style="--i:6">t</h2>
+                        <h2 id="letra" style="--i:7">a</h2>
+                        <h2 id="letra" style="--i:8">d</h2>
+                        <h2 id="letra" style="--i:9">o</h2>
+                        <h2 id="letra" style="--i:10">s</h2>
+                    </div>
+                    <div class="frase">
+                        <h2 class="pular">8</h2>
+                    </div>
+                    <div class="frase">
+                        <h2 id="letra" style="--i:11">C</h2>
+                        <h2 id="letra" style="--i:12">o</h2>
+                        <h2 id="letra" style="--i:13">m</h2>
+                        <h2 id="letra" style="--i:14">p</h2>
+                        <h2 id="letra" style="--i:15">r</h2>
+                        <h2 id="letra" style="--i:16">o</h2>
+                        <h2 id="letra" style="--i:17">v</h2>
+                        <h2 id="letra" style="--i:18">a</h2>
+                        <h2 id="letra" style="--i:19">d</h2>
+                        <h2 id="letra" style="--i:20">o</h2>
+                        <h2 id="letra" style="--i:21">s</h2>
+
+                    </div>
                 </div>
                 <p class="animate-on-scroll">Nossas estratégias já ajudaram dezenas de escritórios a alcançarem novos patamares</p>
             </div>
