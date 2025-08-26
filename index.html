@@ -124,6 +124,7 @@
         /* Hero Section */
         .hero {
             overflow-y: hidden;
+            overflow: clip;
             position: relative;
             padding: 10px 0 100px;
             background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
@@ -148,6 +149,35 @@
             position: absolute;
             z-index: 1;
             background: #201e1ee1;
+        }
+        .icones{
+            display: flex;
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
+            height: fit-content;
+            bottom: 0;
+        }
+        .icones i{
+            opacity: 1;
+            width: 20px;
+            height: 20px;
+            color: var(--secondary);
+            animation: money infinite ease-in-out calc(var(--i)*9s);
+        }
+        @keyframes money {
+            0%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            90%{
+                opacity: 0.4;
+                transform: translateY(-550px);
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-610px);
+            }
         }
         h1 {
             font-size: 48px;
@@ -596,6 +626,7 @@
             <p class="animate-on-scroll">Estratégias de marketing digital sob medida para advogados que desejam escalar seus resultados e se destacar no mercado competitivo.</p>
             <a href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
         </div>
+        <div class="icones"></div>
     </section>
 
     <!-- Features -->
@@ -785,6 +816,32 @@
                 });
                 ctaObserver.observe(ctaBox);
             }
+            const numeros = [ 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5, 2,4, 5, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2,1, 2, 3, 4, 5, 2,4, 5,1, 2, 3, 4, 5];
+            const quadrados = numeros.map(num => num * num);
+            const classes = [
+                "fa-solid fa-dollar-sign",
+                "fa-solid fa-phone",
+                "fa-solid fa-bitcoin-sign",
+                "fa-solid fa-brazilian-real-sign",
+                "fa-solid fa-rocket"
+            ];
+            // Seleciona a lista no HTML
+            const lista = document.querySelector('.icones');
+
+            // Adiciona os quadrados na lista com um valor aleatório para --i
+            quadrados.forEach(quadrado => {
+                const li = document.createElement('i');
+                const randomClass = classes[Math.floor(Math.random() * classes.length)];
+                li.className = randomClass
+
+                // Gera um número aleatório entre 1 e 100
+                const randomValue = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+
+                // Define a variável CSS --i
+                li.style.setProperty('--i', randomValue / 70); // Ajusta para estar entre 0 e 1 para opacidade
+
+                lista.appendChild(li);
+            });
         });
     </script>
 
