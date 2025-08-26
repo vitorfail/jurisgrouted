@@ -10,6 +10,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="video-js.css" rel="stylesheet" /> 
+    <link href="ponteiros.css" rel="stylesheet" /> 
     <style>
         :root {
             --primary: #2c3e50;
@@ -260,6 +261,99 @@
         .results .section-title h2{
             color: white;
         }
+        .prova_social{
+            padding: 100px 0px;
+        }
+        .center_provas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .prova_social .titulo{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .prova_social .titulo2{
+            width: 80%;
+        }
+        .prova {
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .comentarios {
+            overflow-y: hidden;
+            flex-shrink: 1;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: auto;
+            overflow-x: hidden;
+            min-height: fit-content;
+        }
+        .container_comentarios {
+            width: 100%;
+            animation: scroll 30s linear infinite;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        .container_comentarios{
+            scrollbar-width: none;
+        }
+        .comentario {
+            margin: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 20%;
+            background: #EDEAE3;
+            color: var(--cor-destaque);
+            border-radius: 10px;
+            height: 30rem;
+        }
+        .comentario .content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        .comentario .content img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 5));
+            }
+        }
+        .ponteiros{
+            padding-top: 100px;
+            position: relative;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 390px;
+            background: #1a252f;
+            background-image: radial-gradient(circle, rgba(175, 208, 84, 0.25) 1px, rgba(0, 0, 0, 0) 1px);
+            background-size: 40px 40px;
+            background-attachment: fixed;
+        }
         .section-title h2 {
             font-size: 36px;
             color: var(--primary);
@@ -489,6 +583,15 @@
             color: #bdc3c7;
             font-size: 14px;
         }
+        .shadow-effect {
+		    background: #fff;
+		    padding: 20px;
+		    border-radius: 4px;
+		    text-align: center;
+        border:1px solid #ECECEC;
+		    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+		}
+
         @keyframes descer {
             0%{
                 opacity: 1;
@@ -571,7 +674,11 @@
             a{
                 font-size: 100%;
             }
+            .cards-container{
+                left: 5%;
+            }
         }
+        
     </style>
 </head>
 <body>
@@ -624,7 +731,7 @@
 
             <h1 class="animate-on-scroll">Transforme seu Escritório Jurídico em uma Máquina de Captação de Clientes</h1>
             <p class="animate-on-scroll">Estratégias de marketing digital sob medida para advogados que desejam escalar seus resultados e se destacar no mercado competitivo.</p>
-            <a href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
+            <a id="target" href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
         </div>
         <div class="icones"></div>
     </section>
@@ -715,7 +822,169 @@
             </div>
         </div>
     </section>
-
+    <section class="prova_social">
+        <div class="center_provas">
+            <div class="prova esquerda" style="--i:0s" id="esquerda">
+                <p class="titulo">Veja o resutado na prática</p>
+                <p class="titulo2">Nossos alunos tem resultados todos os dias</p>
+                <p>Junte-se a vários empreendedores que já conquistaram o controle total das finanças de suas empresas de forma simples e eficiente, e impulsione seu negócio para o próximo nível</p>
+                <a id="target" href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
+            </div>
+            <div class="comentarios" style="--i:0s">
+                <div class="container_comentarios">
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario1.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario2.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario3.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario4.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario5.png">
+                        </div>
+                    </div>     
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario1.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario2.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario3.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario4.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario5.png">
+                        </div>
+                    </div>  
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario1.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario2.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario3.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario4.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario5.png">
+                        </div>
+                    </div>  
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario1.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario2.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario3.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario4.png">
+                        </div>
+                    </div>
+                    <div class="comentario cima" style="--i:0s" id="cima">
+                        <div class="content">
+                            <img src="comentarios/comentario5.png">
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TESTIMONIALS -->
+    <section class="ponteiros">
+        <div class="cards-container">
+            <ul class="cards" style="--items: 7;">
+                <li style="--i: 0;">
+                    <input type="radio" id="item-0" name="gallery-item">
+                    <label for="item-0">Início</label>
+                    <h2>Início</h2>
+                    <p>Primeiramente vamos alinhas nossas espectativas e apresentar resutlados e cases concretos.</p>
+                </li>
+                <li style="--i: 1;">
+                    <input type="radio" id="item-1" name="gallery-item">
+                    <label for="item-1">2020</label>
+                    <h2>2020</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem sunt omnis facilis quas corporis at, officia itaque!</p>
+                </li>
+                <li style="--i: 2;">
+                    <input type="radio" id="item-2" name="gallery-item">
+                    <label for="item-2">2021</label>
+                    <h2>2021</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem sunt omnis facilis quas corporis at, officia itaque!</p>
+                </li>
+                <li style="--i: 3;">
+                    <input type="radio" id="item-3" name="gallery-item">
+                    <label for="item-3">2022</label>
+                    <h2>2022</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem sunt omnis facilis quas corporis at, officia itaque!</p>
+                </li>
+                <li style="--i: 4;">
+                    <input type="radio" id="item-4" name="gallery-item">
+                    <label for="item-4">2023</label>
+                    <h2>2023</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem sunt omnis facilis quas corporis at, officia itaque!</p>
+                </li>
+                <li style="--i: 5;">
+                    <input type="radio" id="item-5" name="gallery-item">
+                    <label for="item-5">2024</label>
+                    <h2>2024</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem sunt omnis facilis quas corporis at, officia itaque!</p>
+                </li>
+                <li style="--i: 6;">
+                    <input type="radio" id="item-6" name="gallery-item">
+                    <label for="item-6">2025</label>
+                    <h2>2025</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem sunt omnis facilis quas corporis at, officia itaque!</p>
+                </li>
+            </ul>
+        </div>
+    </section>
     <!-- CTA Section -->
     <section class="cta-section" id="cta">
         <div class="container">
@@ -765,6 +1034,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelectorAll(".card"), {
@@ -842,6 +1112,21 @@
 
                 lista.appendChild(li);
             });
+            const radios = document.querySelectorAll('input[name="gallery-item"]');
+            let currentIndex = 0;
+
+            // Função para alternar para o próximo radio
+            function nextRadio() {
+                radios[currentIndex].checked = false; // Desmarca o atual (opcional)
+                currentIndex = (currentIndex + 1) % radios.length; // Vai para o próximo, reinicia no fim
+                radios[currentIndex].checked = true; // Marca o novo
+            }
+
+            // Marca o primeiro como ativo ao iniciar (caso não esteja)
+            radios[currentIndex].checked = true;
+
+            // Executa a cada 3 segundos (3000 milissegundos)
+            setInterval(nextRadio, 3000);
         });
     </script>
 
