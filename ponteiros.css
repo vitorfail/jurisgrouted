@@ -138,7 +138,7 @@
 
   .cards > li > h2,
   .cards > li > p{
-    color: white;
+    color: inherit;
     position: absolute;
     left: 50%;
     text-align: center;

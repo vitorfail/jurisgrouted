@@ -9,6 +9,7 @@
     <title>Juris Grouted | Marketing Jurídico de Alto Impacto</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link href="video-js.css" rel="stylesheet" /> 
     <link href="ponteiros.css" rel="stylesheet" /> 
     <style>
@@ -34,7 +35,16 @@
             color: var(--dark);
             line-height: 1.6;
         }
-        
+        #linha{
+            width: 80px;
+            height: auto;
+        }
+        .linha{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -262,21 +272,12 @@
             color: white;
         }
         .prova_social{
-            background: linear-gradient(-45deg, #ffffff, #d4d4d4, #e2f4fb, #dedede);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;            
+            color: white;
+            background: #1a252f;
+            background-image: radial-gradient(circle, rgba(175, 208, 84, 0.25) 1px, rgba(0, 0, 0, 0) 1px);
+            background-size: 40px 40px;
+            background-attachment: fixed;
             padding: 100px 0px;
-        }
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
         }
         .center_provas {
             display: flex;
@@ -360,6 +361,8 @@
             padding-top: 100px;
             overflow-y: hidden;
             overflow-x: hidden;
+            background: white;
+            color: var(--primary);
             width: 100%;
             display: flex;
             display: flex;
@@ -368,20 +371,20 @@
             align-items: center;
             justify-content: center;
             height: 690px;
-            background: #1a252f;
-            background-image: radial-gradient(circle, rgba(175, 208, 84, 0.25) 1px, rgba(0, 0, 0, 0) 1px);
-            background-size: 40px 40px;
-            background-attachment: fixed;
             flex-direction: column;
+        }
+        .ponteiros .linha{
+            padding-top: 20px;
         }
         .ponteiros h1{
             font-weight: 600;
             font-size: 36px;
             opacity: 1;
-            color: white;
             position: relative;
         }
         .section-title h2 {
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
             font-size: 36px;
             color: var(--primary);
             margin-bottom: 15px;
@@ -768,6 +771,9 @@
         <div class="container">
             <div class="section-title">
                 <h2 class="animate-on-scroll">Nossos Serviços Especializados</h2>
+                <div class="linha" >
+                    <img src="imgs/linha.png" id="linha" alt="Linhas"/>
+                </div>
                 <p class="animate-on-scroll">Soluções exclusivas desenvolvidas para atender as necessidades específicas do mercado jurídico</p>
             </div>
             <div class="features-grid">
@@ -795,7 +801,6 @@
             </div>
         </div>
     </section>
-
     <!-- Results -->
     <section class="results" id="resultados">
         <div class="container">
@@ -828,8 +833,10 @@
                         <h2 id="letra" style="--i:19">d</h2>
                         <h2 id="letra" style="--i:20">o</h2>
                         <h2 id="letra" style="--i:21">s</h2>
-
                     </div>
+                </div>
+                <div class="linha" >
+                    <img src="imgs/linha.png" id="linha" alt="Linhas"/>
                 </div>
                 <p class="animate-on-scroll">Nossas estratégias já ajudaram dezenas de escritórios a alcançarem novos patamares</p>
             </div>
@@ -849,10 +856,60 @@
             </div>
         </div>
     </section>
-    <section class="prova_social">
+    <!-- TESTIMONIALS -->
+    <section class="ponteiros">
+        <h1>Como funciona nosso processo?</h1>
+        <div class="linha" >
+            <img src="imgs/linha.png" id="linha" alt="Linhas"/>
+        </div>
+        <div class="cards-container">
+            <ul class="cards" style="--items: 6;">
+                <li style="--i: 0;">
+                    <input type="radio" id="item-0" name="gallery-item">
+                    <label for="item-0">1°</label>
+                    <h2>Início</h2>
+                    <p>Primeiramente vamos alinhas nossas espectativas e apresentar resultados e cases concretos.</p>
+                </li>
+                <li style="--i: 1;">
+                    <input type="radio" id="item-1" name="gallery-item">
+                    <label for="item-1">2°</label>
+                    <h2>Plano</h2>
+                    <p>Por meio de análise mercado determinamos a melhor praça e a melhor plataforma para investir em anúncios</p>
+                </li>
+                <li style="--i: 2;">
+                    <input type="radio" id="item-2" name="gallery-item">
+                    <label for="item-2">3°</label>
+                    <h2>Início das Campanhas</h2>
+                    <p>Começamos o "start" nas campanhas de tráfego. </p>
+                </li>
+                <li style="--i: 3;">
+                    <input type="radio" id="item-3" name="gallery-item">
+                    <label for="item-3">4°</label>
+                    <h2>Avaliação</h2>
+                    <p>Esse proceso se dá início ao final da priemira semana. Fazemos a menssuaração dos dados obtidos elaboramos os melhores caminhos para um bom desempenho. Nessa fase chacamos também o cliente a nível comercial. Pois boas campanhas não podem suprir um problema de atendimento</p>
+                </li>
+                <li style="--i: 4;">
+                    <input type="radio" id="item-4" name="gallery-item">
+                    <label for="item-4">5°</label>
+                    <h2>Escalonamento</h2>
+                    <p>Depois do pente fino da fase anterior temos a validação do tipo de comunicação ideal para lidar com a "persona" escolhida.</p>
+                </li>
+                <li style="--i: 5;">
+                    <input type="radio" id="item-5" name="gallery-item">
+                    <label for="item-5">6°</label>
+                    <h2>Encerramento de contrato</h2>
+                    <p>Após um mês, caso o cliente não sinto que obteve um bom resultado, poderá pedir encerramento do contrato sem custos adicionais.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--<section class="prova_social">
         <div class="center_provas">
             <div class="prova esquerda" style="--i:0s" id="esquerda">
-                <p class="titulo">Veja o resultado na prática</p>
+                <h2 class="titulo">Veja o resultado na prática</h2>
+                <div class="linha" >
+                    <img src="imgs/linha.png" id="linha" alt="Linhas"/>
+                </div>
                 <p class="titulo2">Junte-se a vários empreendedores que já conquistaram o controle total das finanças de suas empresas de forma simples e eficiente, e impulsione seu negócio para o próximo nível</p>
                 <a id="target" href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
             </div>
@@ -962,51 +1019,7 @@
             </div>
         </div>
     </section>
-    <!-- TESTIMONIALS -->
-    <section class="ponteiros">
-        <h1>Como funciona nosso processo?</h1>
-        <div class="cards-container">
-            <ul class="cards" style="--items: 6;">
-                <li style="--i: 0;">
-                    <input type="radio" id="item-0" name="gallery-item">
-                    <label for="item-0">1°</label>
-                    <h2>Início</h2>
-                    <p>Primeiramente vamos alinhas nossas espectativas e apresentar resultados e cases concretos.</p>
-                </li>
-                <li style="--i: 1;">
-                    <input type="radio" id="item-1" name="gallery-item">
-                    <label for="item-1">2°</label>
-                    <h2>Plano</h2>
-                    <p>Por meio de análise mercado determinamos a melhor praça e a melhor plataforma para investir em anúncios</p>
-                </li>
-                <li style="--i: 2;">
-                    <input type="radio" id="item-2" name="gallery-item">
-                    <label for="item-2">3°</label>
-                    <h2>Início das Campanhas</h2>
-                    <p>Começamos o "start" nas campanhas de tráfego. </p>
-                </li>
-                <li style="--i: 3;">
-                    <input type="radio" id="item-3" name="gallery-item">
-                    <label for="item-3">4°</label>
-                    <h2>Avaliação</h2>
-                    <p>Esse proceso se dá início ao final da priemira semana. Fazemos a menssuaração dos dados obtidos elaboramos os melhores caminhos para um bom desempenho. Nessa fase chacamos também o cliente a nível comercial. Pois boas campanhas não podem suprir um problema de atendimento</p>
-                </li>
-                <li style="--i: 4;">
-                    <input type="radio" id="item-4" name="gallery-item">
-                    <label for="item-4">5°</label>
-                    <h2>Escalonamento</h2>
-                    <p>Depois do pente fino da fase anterior temos a validação do tipo de comunicação ideal para lidar com a "persona" escolhida.</p>
-                </li>
-                <li style="--i: 5;">
-                    <input type="radio" id="item-5" name="gallery-item">
-                    <label for="item-5">6°</label>
-                    <h2>Encerramento de contrato</h2>
-                    <p>Após um mês, caso o cliente não sinto que obteve um bom resultado, poderá pedir encerramento do contrato sem custos adicionais.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- CTA Section -->
+    -->
     <section class="cta-section" id="cta">
         <div class="container">
             <div class="cta-box animate-on-scroll">
