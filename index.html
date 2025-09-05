@@ -10,730 +10,10 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-    <link href="video-js.css" rel="stylesheet" /> 
-    <link href="ponteiros.css" rel="stylesheet" /> 
+    <link href="css/video-js.css" rel="stylesheet" /> 
+    <link href="css/ponteiros.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" /> 
     <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #D49A36;
-            --accent: #3498db;
-            --light: #ecf0f1;
-            --dark: #1a252f;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        i{
-            margin-right: 10px;
-        }
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        #linha{
-            width: 80px;
-            height: auto;
-        }
-        .linha{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .container img{
-            width: 37%;
-            height: auto;
-        }
-        /* Header */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            transition: all 0.3s;
-        }
-        
-        header.scrolled {
-            padding: 10px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            transition: all 0.3s;
-        }
-        
-        header.scrolled nav {
-            padding: 5px 0;
-        }
-        
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary);
-            transition: all 0.3s;
-        }
-        
-        header.scrolled .logo {
-            font-size: 24px;
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        a{
-            font-size: 25px;
-        }
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-        
-        .cta-btn {
-            background-color: var(--secondary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .cta-btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            overflow-y: hidden;
-            overflow: clip;
-            position: relative;
-            padding: 10px 0 100px;
-            background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
-            color: white;
-            text-align: center;
-        }
-        #intro{
-            box-shadow: 0px 0px 20px black;
-            border-radius: 20px;
-            width: 30%;
-            height: auto;
-        }
-        #back{
-            width: 100%;
-            display: flex;
-            position: absolute;
-        }
-        .fundo-preto{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            position: absolute;
-            z-index: 1;
-            background: #201e1ee1;
-        }
-        .icones{
-            display: flex;
-            position: absolute;
-            width: 100%;
-            pointer-events: none;
-            height: fit-content;
-            bottom: 0;
-        }
-        .icones i{
-            opacity: 1;
-            width: 20px;
-            height: 20px;
-            color: var(--secondary);
-            animation: money infinite ease-in-out calc(var(--i)*9s);
-        }
-        @keyframes money {
-            0%{
-                opacity: 1;
-                transform: translateY(0px);
-            }
-            90%{
-                opacity: 0.4;
-                transform: translateY(-550px);
-            }
-            100%{
-                opacity: 0;
-                transform: translateY(-610px);
-            }
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease 0.2s;
-        }
-        
-        .hero-btn {
-            background-color: var(--secondary);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease 0.4s;
-        }
-        
-        .hero-btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
-        }
-        .hero .container{
-            position: relative;
-            z-index: 2;
-        }
-        /* Animação quando elementos estão visíveis */
-        .animate {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-        
-        /* Features */
-        .features {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        #letra{
-            animation: descer 1s ease-in-out forwards;
-            animation-delay: calc(var(--i) * 0.1s);
-            transition: all 0.2s ease-in-out;
-            transform: translateX(0px);
-            opacity: 0;
-        }
-        .frase1{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-        }
-        .frase{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: auto;
-        }
-        .results .section-title h2{
-            color: white;
-        }
-        .prova_social{
-            color: white;
-            background: #1a252f;
-            background-image: radial-gradient(circle, rgba(175, 208, 84, 0.25) 1px, rgba(0, 0, 0, 0) 1px);
-            background-size: 40px 40px;
-            background-attachment: fixed;
-            padding: 100px 0px;
-        }
-        .center_provas {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .prova_social .titulo{
-            font-size: 36px;
-            font-weight: 700;
-        }
-        .prova_social .titulo2{
-            width: 70%;
-            padding: 20px 0px;
-            text-align: center;
-        }
-        .prova {
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-        .comentarios {
-            overflow-y: hidden;
-            flex-shrink: 1;
-            width: 70%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: auto;
-            overflow-x: hidden;
-            min-height: fit-content;
-        }
-        .container_comentarios {
-            width: 100%;
-            animation: scroll 30s linear infinite;
-            display: flex;
-            justify-content: center;
-            padding-top: 20px;
-        }
-        .container_comentarios{
-            scrollbar-width: none;
-        }
-        .comentario {
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.245);
-            margin: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            width: 20%;
-            background: #EDEAE3;
-            color: var(--cor-destaque);
-            border-radius: 10px;
-            height: 30rem;
-        }
-        .comentario .content {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-        .comentario .content img
-        {
-            width: 100%;
-            height: 100%;
-        }
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-250px * 5));
-            }
-        }
-        .ponteiros{
-            padding-top: 100px;
-            overflow-y: hidden;
-            overflow-x: hidden;
-            background: white;
-            color: var(--primary);
-            width: 100%;
-            display: flex;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            align-items: center;
-            justify-content: center;
-            height: 690px;
-            flex-direction: column;
-        }
-        .ponteiros .linha{
-            padding-top: 20px;
-        }
-        .ponteiros h1{
-            font-weight: 600;
-            font-size: 36px;
-            opacity: 1;
-            position: relative;
-        }
-        .section-title h2 {
-            font-family: "EB Garamond", serif;
-            font-optical-sizing: auto;
-            font-size: 36px;
-            color: var(--primary);
-            margin-bottom: 15px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .section-title p {
-            color: #ffffff;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease 0.2s;
-        }
-        
-        .features-grid {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        @property --gradient-angle {
-        syntax: "<angle>";
-        initial-value: 0turn;
-        inherits: false;
-        }
-        .card {
-            animation: 2s gradient-angle infinite linear;
-            border: 2px solid transparent;
-            position: relative;
-            width: 30%;
-            background-image: linear-gradient(#584827, #2d230f),
-            conic-gradient(
-            from var(--gradient-angle),
-            #584827 0%,
-            #c7a03c 37%,
-            #f9de90 30%,
-            #c7a03c 33%,
-            #584827 40%,
-            #3b5827 50%,
-            #c7a03c 77%,
-            #f9de90 80%,
-            #c7a03c 83%,
-            #bbff00 90%
-            );
-            background-clip: padding-box, border-box;
-            background-origin: padding-box, border-box;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            opacity: 1;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        @keyframes gradient-angle {
-            to {
-                --gradient-angle: 1turn;
-            }
-        }
-        /* Delay para animação dos cards */
-        .card:nth-child(1) { transition-delay: 0.1s; }
-        .card:nth-child(2) { transition-delay: 0.2s; }
-        .card:nth-child(3) { transition-delay: 0.3s; }
-        .card:nth-child(4) { transition-delay: 0.4s; }
-        .card:nth-child(5) { transition-delay: 0.5s; }
-        .card:nth-child(6) { transition-delay: 0.6s; }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 50px;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-        
-        .card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: var(--secondary);
-        }
-        .card p{
-            color: white;
-        }
-        /* Results */
-        .results {
-            padding: 100px 0;
-            background-attachment: fixed;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* cor com transparência por cima */
-    url("advogado.jpg");
-            background-position: 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: white;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            text-align: center;
-            margin-top: 50px;
-        }
-        
-        .stat-item {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        /* Delay para animação dos stats */
-        .stat-item:nth-child(1) { transition-delay: 0.1s; }
-        .stat-item:nth-child(2) { transition-delay: 0.2s; }
-        .stat-item:nth-child(3) { transition-delay: 0.3s; }
-        .stat-item:nth-child(4) { transition-delay: 0.4s; }
-        
-        .stat-item h3 {
-            font-size: 50px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .stat-item p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            background-color: white;
-            text-align: center;
-        }
-        
-        .cta-box {
-            background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
-            padding: 60px;
-            border-radius: 15px;
-            color: white;
-            max-width: 800px;
-            margin: 0 auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .cta-box h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease 0.2s;
-        }
-        
-        .cta-box p {
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease 0.4s;
-        }
-        
-        .cta-box .hero-btn {
-            padding: 12px 25px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease 0.6s;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        /* Delay para animação das colunas do footer */
-        .footer-column:nth-child(1) { transition-delay: 0.1s; }
-        .footer-column:nth-child(2) { transition-delay: 0.2s; }
-        .footer-column:nth-child(3) { transition-delay: 0.3s; }
-        .footer-column:nth-child(4) { transition-delay: 0.4s; }
-        
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-column ul li a:hover {
-            color: white;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        .social-links I{
-            margin: 0;
-        }
-        .social-links a {
-            color: white;
-            background-color: rgba(255,255,255,0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #bdc3c7;
-            font-size: 14px;
-        }
-        .shadow-effect {
-		    background: #fff;
-		    padding: 20px;
-		    border-radius: 4px;
-		    text-align: center;
-        border:1px solid #ECECEC;
-		    box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
-		}
-
-        @keyframes descer {
-            0%{
-                opacity: 1;
-                transition: all 0.2s ease-in-out;
-                transform: translateY(-45px);
-            }
-            93%{
-                opacity: 1;
-                transition: all 0.2s ease-in-out;
-                transform: translateY(0px);
-            }
-            97%{
-                opacity: 1;
-                transition: all 0.2s ease-in-out;
-                transform: translateY(-2px);
-            }
-            100%{
-                opacity: 1;
-                transition: all 0.2s ease-in-out;
-                transform: translateY(0px);
-            }
-        }
-        /* Responsive */
-        @media (max-width: 768px) {
-            .frase:nth-of-type(2){
-                display: none;
-            }
-            .frase1{
-                flex-direction: column;
-                display: flex;
-                align-items: center;
-            }
-            .features-grid{
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-            }
-            .features-grid .card{
-                width: 100%;
-                margin-top: 20px;
-            }
-            #back{
-                width: inherit;
-            }
-            .hero{
-                overflow: hidden;
-                padding: 0px 0px 100px;
-            }
-            .hero .container{
-                padding: 20px 20px;
-            }
-            #intro{
-                width: 80%;
-            }
-            .nav-links {
-                display: none;
-            }
-            
-            h1 {
-                font-size: 26px;
-            }
-            
-            .hero p {
-                font-size: 100%;
-            }
-            
-            .cta-box {
-                padding: 40px 20px;
-            }
-            
-            .cta-box h2 {
-                font-size: 28px;
-            }
-            .intro{
-                width: 90%;
-            }
-            .container img{
-                width: 80%;
-            }
-            a{
-                font-size: 100%;
-            }
-            .cards-container{
-                left: 5%;
-            }
-        }
-        
     </style>
 </head>
 <body>
@@ -790,7 +70,22 @@
         </div>
         <div class="icones"></div>
     </section>
-
+    <section class="dados">
+        <div class="dados-container">
+            <div class="dado-item">
+                <div class="stat-number dourado" id="numero1">0+</div>
+                <div class="stat-label">Anos de Experiência</div>
+            </div>
+            <div class="dado-item">
+                <div class="stat-number dourado" id="numero2">+ R$ </div>
+                <div class="stat-label">Valor Investido em Tráfego</div>
+            </div>
+            <div class="dado-item">
+                <div class="stat-number dourado" id="numero3">0%</div>
+                <div class="stat-label">Clientes Satisfeitos</div>
+            </div>
+        </div>
+    </section>
     <!-- Features -->
     <section class="features" id="servicos">
         <div class="container">
@@ -1095,7 +390,7 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 25,
@@ -1146,6 +441,54 @@
                 });
                 ctaObserver.observe(ctaBox);
             }
+            const total = 7; // Defina o número total que você deseja contar
+            let count = 0;
+
+            const total_feedbacks = 879000; // Defina o número total que você deseja contar
+            let count_feedbacks = 0;
+
+            const total_satisfeitos = 30; // Defina o número total que você deseja contar
+            let count_satisfeitos = 0;
+
+            function contadores(){
+                const numero = document.getElementById('numero1');
+
+                if (numero !== null){
+                    const intervalo = setInterval(() => {
+                            if (count < total) {
+                                count=count+1;
+                                numero.textContent ='+'+ count;
+                            } else {
+                                clearInterval(intervalo);
+                            }    
+                        
+                    }, 300);
+                }
+                const numero_feedbacks = document.getElementById('numero2');
+                if(numero_feedbacks !== null){
+                    const intervalo_feedbacks = setInterval(() => {
+                        if (count_feedbacks < total_feedbacks) {
+                            count_feedbacks=count_feedbacks+7;
+                            numero_feedbacks.textContent ='+R$ '+ count_feedbacks;
+                        } else {
+                            clearInterval(intervalo_feedbacks);
+                        }    
+                    }, 1);
+                }
+                const numero_satisfeitos = document.getElementById('numero3');
+
+                if(numero_satisfeitos !== null){
+                    const intervalo_satisfeitos = setInterval(() => {
+                        if (count_satisfeitos < total_satisfeitos) {
+                            count_satisfeitos=count_satisfeitos+1;
+                            numero_satisfeitos.textContent =count_satisfeitos+ "%";
+                        } else {
+                            clearInterval(intervalo_satisfeitos);
+                        }    
+                    }, 70);
+                }
+            }
+            contadores()
             const numeros = [ 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5, 2,4, 5, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2,1, 2, 3, 4, 5, 2,4, 5,1, 2, 3, 4, 5];
             const quadrados = numeros.map(num => num * num);
             const classes = [
