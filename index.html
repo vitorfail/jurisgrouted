@@ -73,14 +73,17 @@
     <section class="dados">
         <div class="dados-container">
             <div class="dado-item">
+                <i class="fa-regular fa-calendar-days"></i>
                 <div class="stat-number dourado" id="numero1">0+</div>
                 <div class="stat-label">Anos de Experiência</div>
             </div>
             <div class="dado-item">
+                <i class="fa-solid fa-money-bill-1-wave"></i>
                 <div class="stat-number dourado" id="numero2">+ R$ </div>
                 <div class="stat-label">Valor Investido em Tráfego</div>
             </div>
             <div class="dado-item">
+                <i class="fa-solid fa-shield-halved"></i>
                 <div class="stat-number dourado" id="numero3">0%</div>
                 <div class="stat-label">Clientes Satisfeitos</div>
             </div>
@@ -468,8 +471,8 @@
                 if(numero_feedbacks !== null){
                     const intervalo_feedbacks = setInterval(() => {
                         if (count_feedbacks < total_feedbacks) {
-                            count_feedbacks=count_feedbacks+7;
-                            numero_feedbacks.textContent ='+R$ '+ count_feedbacks;
+                            count_feedbacks=count_feedbacks+77;
+                            numero_feedbacks.textContent ='+R$ '+ count_feedbacks+",00";
                         } else {
                             clearInterval(intervalo_feedbacks);
                         }    
@@ -485,7 +488,7 @@
                         } else {
                             clearInterval(intervalo_satisfeitos);
                         }    
-                    }, 70);
+                    }, 130);
                 }
             }
             contadores()
