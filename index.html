@@ -127,57 +127,40 @@
     <!-- Results -->
     <section class="results" id="resultados">
         <div class="container">
-            <div class="section-title">
-                <div class="frase1">
-                    <div class="frase">
-                        <h2 id="letra" style="--i:1">R</h2>
-                        <h2 id="letra" style="--i:2">e</h2>
-                        <h2 id="letra" style="--i:3">s</h2>
-                        <h2 id="letra" style="--i:4">u</h2>
-                        <h2 id="letra" style="--i:5">l</h2>
-                        <h2 id="letra" style="--i:6">t</h2>
-                        <h2 id="letra" style="--i:7">a</h2>
-                        <h2 id="letra" style="--i:8">d</h2>
-                        <h2 id="letra" style="--i:9">o</h2>
-                        <h2 id="letra" style="--i:10">s</h2>
-                    </div>
-                    <div class="frase">
-                        <h2 class="pular">8</h2>
-                    </div>
-                    <div class="frase">
-                        <h2 id="letra" style="--i:11">C</h2>
-                        <h2 id="letra" style="--i:12">o</h2>
-                        <h2 id="letra" style="--i:13">m</h2>
-                        <h2 id="letra" style="--i:14">p</h2>
-                        <h2 id="letra" style="--i:15">r</h2>
-                        <h2 id="letra" style="--i:16">o</h2>
-                        <h2 id="letra" style="--i:17">v</h2>
-                        <h2 id="letra" style="--i:18">a</h2>
-                        <h2 id="letra" style="--i:19">d</h2>
-                        <h2 id="letra" style="--i:20">o</h2>
-                        <h2 id="letra" style="--i:21">s</h2>
-                    </div>
-                </div>
-                <div class="linha" >
-                    <img src="imgs/linha.png" id="linha" alt="Linhas"/>
-                </div>
-                <p class="animate-on-scroll">Nossas estratégias já ajudaram dezenas de escritórios a alcançarem novos patamares</p>
+            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <h1>Nossa estratégia se faz <strong>Presente</strong></h1>
+                <p>Nossa participação como patrocinadores em um evento na <a href="https://www.instagram.com/oabcrato"> OAB Crato</a>. No dia 11/12 de 2025. O tema do evento foi "Transformação da Advocacia no Mundo Digital" guiada pelo Dr Iago Capistrano e o Dr Marcos Rochel.</p>
             </div>
-            <div class="stats">
-                <div class="stat-item animate-on-scroll">
-                    <h3>+300%</h3>
-                    <p>Aumento médio em leads qualificados</p>
+            <div style="display: flex;">
+                <div class="slide" style="background-image: url('imgs/evento4.jpg');">
+                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
                 </div>
-                <div class="stat-item animate-on-scroll">
-                    <h3>5x</h3>
-                    <p>Retorno sobre investimento em 12 meses</p>
+                <div class="slide" style="background-image: url('imgs/evento3.jpg');">
+                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
                 </div>
-                <div class="stat-item animate-on-scroll">
-                    <h3>+120</h3>
-                    <p>Escritórios atendidos em todo Brasil</p>
+                <div class="slide" style="background-image: url('imgs/evento1.jpg');">
+                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
                 </div>
+                <div class="slide" style="background-image: url('imgs/evento5.jpg');">
+                        <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
+                </div>
+                <div class="slide" style="background-image: url('imgs/evento6.jpg');">
+                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
+                </div>            
             </div>
         </div>
+        <section class="estrelas">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
     </section>
     <!-- TESTIMONIALS -->
     <!--
@@ -411,6 +394,19 @@
             // Observador de elementos para animação
             // Configuração inicial da cena
             // Selecionar todos os elementos para animar
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+            slide.addEventListener('click', () => {
+                clearActiveClasses();
+                slide.classList.add('active');
+            });
+            });
+
+            function clearActiveClasses() {
+            slides.forEach(slide => {
+                slide.classList.remove('active')
+            });
+            }
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {

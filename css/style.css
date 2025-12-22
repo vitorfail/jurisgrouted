@@ -1,6 +1,7 @@
         :root {
             --primary: #2c3e50;
             --secondary: #D49A36;
+            --second: #5a4218;
             --accent: #3498db;
             --light: #ecf0f1;
             --dark: #1a252f;
@@ -179,7 +180,7 @@
             font-size: 48px;
             margin-bottom: 20px;
             line-height: 1.2;
-            opacity: 0;
+            opacity: 1;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
@@ -490,16 +491,201 @@
         }
         /* Results */
         .results {
+            position: relative;
             padding: 100px 0;
-            background-attachment: fixed;
+            /*background-attachment: fixed;*/
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* cor com transparência por cima */
-    url("../advogado.jpg");
+    url("../imgs/evento2.jpg");
             background-position: 50%;
             background-repeat: no-repeat;
             background-size: cover;
             color: white;
         }
-        
+        .results strong{
+            color: var(--secondary);
+        }
+        .results a{
+            font-size: inherit;
+            color: var(--secondary);
+        }
+        .results .container{
+            position: relative;
+            z-index: 1;
+        }
+        .results::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            top: 0;
+            background: radial-gradient(#10171d8a, #10171d);
+        }
+        .results h1, .results p{
+            text-align: center;
+            padding: 30px 0px;
+        }
+        .results img{
+            margin: 30px 0px;
+            width: 60%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px black;
+        }
+        .results .slide {
+            border: 1px solid var(--second);
+            height: 80vh;
+            border-radius: 20px;
+            margin: 10px;
+            cursor: pointer;
+            color: #fff;
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: .5s ease-in-out;
+        }
+        .results .slide::before{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            border-radius: 20px;
+            background: radial-gradient(transparent, rgba(0, 0, 0, 0.596));
+        }
+        .results .slide h3 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            margin: 0;
+            font-size: 24px;
+            opacity: 0;
+        }
+        .results .slide.active {
+            flex: 10;
+        }
+        .results .slide.active h3 {
+            opacity: 1;
+            transition: opacity .3s ease-in .4s;
+        }
+        .estrelas{
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+                opacity: 0.2;
+            /* https://lh3.googleusercontent.com/ka_5IYJDRkXZnbptxq64LPuggGL5FM8gnpJlsuSiOQh4b39kMkiRbVfX8iK8bjMg5SLkdfoix09P60wyFjN2=w681-h614 */
+            background-color:rgba(0, 0, 0, 0);
+        }
+        .estrelas span{
+            position: absolute;
+            top:50%;
+            left:50%;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+            animation: animate 3s linear infinite;
+        }
+        .estrelas span::before{
+            content:'';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 1px;
+            background: linear-gradient(90deg,#fff,transparent);
+        }
+        @keyframes animate
+        {
+            0%
+            {
+                transform: rotate(315deg) translateX(0);
+                opacity: 1;
+            }
+            70%
+            {
+                opacity: 1;
+            }
+            100%
+            {
+                transform: rotate(315deg) translateX(-1000px);
+                opacity: 0;
+            }
+        }
+        .estrelas span:nth-child(1){
+            top: 0;
+            right: 0;
+            left: initial;
+            animation-delay: 0s;
+            animation-duration: 1s;
+        }
+        .estrelas span:nth-child(2){
+            top: 0;
+            right: 80px;
+            left: initial;
+            animation-delay: 0.2s;
+            animation-duration: 3s;
+        }
+        .estrelas span:nth-child(3){
+            top: 80;
+            right: 0px;
+            left: initial;
+            animation-delay: 0.4s;
+            animation-duration: 2s;
+        }
+        .estrelas span:nth-child(4){
+            top: 0;
+            right: 180px;
+            left: initial;
+            animation-delay: 0.6s;
+            animation-duration: 1.5s;
+        }
+        .estrelas span:nth-child(5){
+            top: 0;
+            right: 400px;
+            left: initial;
+            animation-delay: 0.8s;
+            animation-duration: 2.5s;
+        }
+        .estrelas span:nth-child(6){
+            top: 0;
+            right: 600px;
+            left: initial;
+            animation-delay: 1s;
+            animation-duration: 3s;
+        }
+        .estrelas span:nth-child(7){
+            top: 300px;
+            right: 0px;
+            left: initial;
+            animation-delay: 1.2s;
+            animation-duration: 1.75s;
+        }
+        .estrelas span:nth-child(8){
+            top: 0px;
+            right: 700px;
+            left: initial;
+            animation-delay: 1.4s;
+            animation-duration: 1.25s;
+        }
+        .estrelas span:nth-child(9){
+            top: 0px;
+            right: 1000px;
+            left: initial;
+            animation-delay: 0.75s;
+            animation-duration: 2.25s;
+        }
+        .estrelas span:nth-child(9){
+            top: 0px;
+            right: 450px;
+            left: initial;
+            animation-delay: 2.75s;
+            animation-duration: 2.75s;
+        }
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
