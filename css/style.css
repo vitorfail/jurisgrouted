@@ -535,7 +535,7 @@ url("../imgs/evento2.jpg");
     border: 1px solid var(--second);
     height: 80vh;
     border-radius: 20px;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
     color: #fff;
     flex: 1;
