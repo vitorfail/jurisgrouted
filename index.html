@@ -129,7 +129,11 @@
         <div class="container">
             <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
                 <h1>Nossa estratégia se faz <strong>Presente</strong></h1>
-                <p>Nossa participação como patrocinadores em um evento na <a href="https://www.instagram.com/oabcrato"> OAB Crato</a>. No dia 11/12 de 2025. O tema do evento foi "Transformação da Advocacia no Mundo Digital" guiada pelo Dr Iago Capistrano e o Dr Marcos Rochel.</p>
+                <p>Estamos onde a advocacia evolui.
+
+Participamos ativamente do evento da OAB Crato sobre Transformação da Advocacia no Mundo Digital, conduzido por Dr. Iago Capistrano e Dr. Marcos Rochel.
+
+Essa imersão no mercado jurídico é o que nos permite criar estratégias reais de crescimento para advogados.</p>
             </div>
             <div style="display: flex;">
                 <div class="slide" style="background-image: url('imgs/evento4.jpg');">
@@ -336,7 +340,149 @@
             </div>
         </div>
     </section>
-
+    <section class="simulador">
+        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="container">
+            <h1 style="text-align: center;">Simule seu investimento</h1>
+            <p style="padding: 10px 0px;">Preencha o formulário com base na situação do seu escritório.</p>
+            <div class="etapas">
+                <p id="p1">Passo 1</p>
+                <p id="p2">Passo 2</p>
+                <p id="p3">Passo 3</p>
+            </div>
+            <div class="fazes">
+                <div class="mudando">
+                    <div id="passo1" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+                        <p style="font-weight: bold;">1 - Investimento e segmento</p>
+                        <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                            <div class="inputs">
+                                <p>Acessoria (R$/Mês)</p>
+                                <input onchange="mudar_acessoria(event.target.value)" placeholder="R$ 2.000,00" value="R$1.500,00" />
+                            </div>
+                            <div class="inputs">
+                                <p>Tráfego (R$/Mês)</p>
+                                <input onchange="mudar_trafego(event.target.value)" placeholder="R$ 5.000,00" value="R$1.500,00" />
+                            </div>
+                            <div class="inputs">
+                                <p>Tempo (meses)</p>
+                                <input onchange="mudar_tempo(event.target.value)" placeholder="6" value="6" />
+                            </div>
+                            <div class="inputs">
+                                <p>Segimento (Área de atuação)</p>
+                                <select onchange="mudar_segmento(event.target.value)">
+                                    <option>PREVIDENCIÁRIO</option>
+                                    <option>BANCÁRIO</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="botoes">
+                            <button class="prev">Voltar</button>
+                            <button onclick="passo2()" class="next">Próximo</button>
+                        </div>
+                    </div>
+                    <div id="passo2" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+                        <p style="font-weight: bold;">2 - Métricas</p>
+                        <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                            <div class="inputs">
+                                <p>CPL (R$)</p>
+                                <input onchange="mudar_cpl(event.target.value)" placeholder="25,00" value="25,00" />
+                            </div>
+                            <div class="inputs">
+                                <p>Conversão (%)</p>
+                                <input onchange="mudar_conversao(event.target.value)" placeholder="25" value="25" />
+                            </div>
+                            <div class="inputs">
+                                <p>Ticket (R$)</p>
+                                <input onchange="mudar_ticket(event.target.value)" placeholder="800,00" value="800,00" />
+                            </div>
+                            <div class="inputs">
+                                <p>Margem de Contribuição (%)</p>
+                                <input onchange="mudar_margem(event.target.value)" placeholder="60" value="60" />
+                            </div>
+                        </div>
+                        <div class="botoes">
+                            <button onclick="passo1()" class="prev">Voltar</button>
+                            <button onclick="passo3()" class="next">Próximo</button>
+                        </div>
+                    </div>
+                    <div id="passo3" style="width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+                        <p style="font-weight: bold;">3 - Revisão</p>
+                        <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                            <div class="rev">
+                                <p style="color: rgb(141, 141, 141);">Custo Periodo</p>
+                                <div>
+                                    <p>Acessoria:</p>
+                                    <p></p>
+                                </div>
+                                <div>
+                                    <p>Tréfego:</p>
+                                    <p></p>
+                                </div>
+                                <div>
+                                    <p>Tempo:</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="rev">
+                                <p style="color: rgb(141, 141, 141);">Métricas</p>
+                                <div>
+                                    <p>CPL:</p>
+                                    <p></p>
+                                </div>
+                                <div>
+                                    <p>Conversão:</p>
+                                    <p></p>
+                                </div>
+                                <div>
+                                    <p>Ticket:</p>
+                                    <p>Margem de Contribuição</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="botoes">
+                            <button onclick="passo2()" class="prev">Voltar</button>
+                            <button onclick="" class="next">Limpar</button>
+                            <button onclick="" class="next">Calcular</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixo">
+                    <h3>Projeto</h3>
+                    <div style="display: flex; justify-content: flex-start;">
+                        <p>Retorno</p>
+                        <p id="roi">--</p>
+                    </div>
+                    <div style="display: flex; justify-content: flex-start;">
+                        <p>Faturamento Líquido</p>
+                        <p id="faturamento">--</p>
+                    </div>
+                    <div class="blocos">
+                        <div>
+                            <p class="titulo">CUSTOS TOTAIS</p>
+                            <P class="valor">--</P>
+                        </div>
+                        <div>
+                            <p class="titulo">LEADS(PERÍODO)</p>
+                            <P class="valor">--</P>
+                        </div>
+                        <div>
+                            <p class="titulo">CONTRATOS</p>
+                            <P class="valor">--</P>
+                        </div>
+                    </div>
+                    <div class="blocos">
+                        <div>
+                            <p class="titulo">FATURAMENTO BRUTO</p>
+                            <P class="valor">--</P>
+                        </div>
+                        <div>
+                            <p class="titulo">FATURAMENTO X TEMPO</p>
+                            <P class="valor">--</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer id="contato">
         <div class="container">
@@ -353,14 +499,13 @@
                 <div class="footer-column animate-on-scroll">
                     <h3>Serviços</h3>
                     <ul>
-                        <li><a href="#">SEO Jurídico</a></li>
-                        <li><a href="#">Gestão de Tráfego</a></li>
-                        <li><a href="#">Conteúdo Jurídico</a></li>
+                        <li><a href="#">Gestão de tráfego Pago</a></li>
+                        <li><a href="#">Posicionamento digital</a></li>
                         <li><a href="#">Automação</a></li>
-                        <li><a href="#">Consultoria</a></li>
+                        <li><a href="#">Controladoria Jurídica</a></li>
+                        <li><a href="#">CRM</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column animate-on-scroll">
                     <h3>Contato</h3>
                     <ul>
@@ -386,6 +531,92 @@
         //It also supports NodeList
         VanillaTilt.init(document.querySelectorAll(".card"));
         var classes = document.querySelectorAll(".card");
+
+
+        var acessoria = 0;
+        var trafego =0;
+        var tempo = 0;
+        var segmento = "";
+        var cpl =0;
+        var conversao = 0;
+        var ticket = 0;
+        var margem = 0;
+        function mudar_acessoria(e){
+            //acessoria = v
+            console.log(e)
+        }
+        function mudar_trafego(v){
+            trafego = v
+        }
+        function mudar_tempo(v){
+            tempo = v
+        }
+        function mudar_segmento(v){
+            segmento = v
+        }
+        function mudar_cpl(v){
+            cpl = v
+        }
+        function mudar_conversao(v){
+            conversao = v
+        }
+        function mudar_ticket(v){
+            ticket = v
+        }
+        function mudar_margem(v){
+            margem = v
+        }
+        function passo1(){
+            var passo1 = document.getElementById("passo1");
+            var passo2 = document.getElementById("passo2");
+            var passo3 = document.getElementById("passo3");
+
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+
+            p1.className = "show";
+            p2.className = "";
+            p3.className = "";
+
+            passo1.style.display = "flex";
+            passo2.style.display = "none";
+            passo3.style.display = "none";
+        }
+        function passo2(){
+            var passo1 = document.getElementById("passo1");
+            var passo2 = document.getElementById("passo2");
+            var passo3 = document.getElementById("passo3");
+
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+
+            p1.className = "";
+            p2.className = "show";
+            p3.className = "";
+
+            passo1.style.display = "none";
+            passo2.style.display = "flex";
+            passo3.style.display = "none";
+        }
+        function passo3(){
+            var passo1 = document.getElementById("passo1");
+            var passo2 = document.getElementById("passo2");
+            var passo3 = document.getElementById("passo3");
+
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+            
+            p1.className = "";
+            p2.className = "";
+            p3.className = "show";
+
+            passo1.style.display = "none";
+            passo2.style.display = "none";
+            passo3.style.display = "flex";
+        }
     </script>
     <script type="module">
         // To allow for importing the .gltf file
@@ -394,6 +625,7 @@
             // Observador de elementos para animação
             // Configuração inicial da cena
             // Selecionar todos os elementos para animar
+            passo1();
             const slides = document.querySelectorAll('.slide');
             slides.forEach(slide => {
             slide.addEventListener('click', () => {
@@ -530,6 +762,7 @@
             // Executa a cada 3 segundos (3000 milissegundos)
             setInterval(nextRadio, 3000);
         });
+
     </script>
 
 </body>
