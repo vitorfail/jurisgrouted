@@ -1,0 +1,91 @@
+<style>
+.form-lado-esquerdo {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+    .form-lado-esquerdo .aviso{
+        font-size: 1.3rem;
+        color: #d66311;
+        font-weight: 500;
+    }
+    .form-lado-esquerdo h1{
+        color: white;
+        font-size: 2.3rem;
+    }
+.form-lado-esquerdo .item {
+  background: #151515;
+  width: 100%;
+  height: auto;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+  padding: 30px 30px;
+  --display: flex;
+  border-style: solid;
+  --border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  --border-top-width: 1px;
+  --border-right-width: 1px;
+  --border-bottom-width: 1px;
+  --border-left-width: 1px;
+  border-color: #363636;
+  --border-color: #363636;
+  --border-radius: 15px 15px 15px 15px;
+  --padding-top: 40px;
+  --padding-bottom: 40px;
+  --padding-left: 40px;
+  --padding-right: 40px;
+}
+    .form-lado-esquerdo .item h2{
+        font-size: 20px;
+    }
+    .form-lado-esquerdo h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 2.3rem;
+}
+.form-lado-esquerdo .item h2, .form-lado-esquerdo .item p {
+  color: white;
+}
+.form-lado-esquerdo .item h2 {
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 25px;
+}
+.form-lado-esquerdo .item p {
+  color: #8E8E8E;
+  font-size: 20px;
+}
+.form-lado-esquerdo h1 strong {
+  font-weight: 700;
+  color: #f97316;
+}
+        @media (max-width: 768px) {
+          .form-lado-esquerdo{
+            width: 100%;
+            align-items: center;
+          }
+          .form-lado-esquerdo .aviso, .form-lado-esquerdo h1{
+            text-align: center;
+          }
+        }
+</style>
+<div class="form-lado-esquerdo">
+    <p class="aviso">AVISO</p>
+    <h1> <strong>NÃO SAIA AGORA!</strong> FALTAM <strong>POUCOS SEGUNDOS</strong> PARA SEU ESCRITÓRIO <strong>MUDAR.</strong></h1>
+    <div class="item">
+        <h2>Complete o formulário</h2>
+        <p>Forneça suas informações no formulário ao lado. Garantimos a segurança total de seus dados. Serão usados apenas para contato</p>
+    </div>
+    <div class="item">
+        <h2>Receba uma ligação personalizada</h2>
+        <p>Em um prazo de até 5 minutos em horário comercial, um dos nossos especialistas entrará em contato diretamente para agendar a reunião mais importante com você.</p>
+    </div>
+</div>
