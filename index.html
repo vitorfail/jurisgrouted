@@ -13,6 +13,7 @@
     <link href="css/video-js.css" rel="stylesheet" /> 
     <link href="css/ponteiros.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" /> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <style>
     </style>
 </head>
@@ -34,7 +35,7 @@
                 autoplay
                 muted
                 loop>
-                <source src="fundo.mp4" type="video/mp4" />
+                <source src="fundo.webm" type="video/webm" />
                 <p class="vjs-no-js">
                     To view this video please enable JavaScript, and consider upgrading to a
                     web browser that
@@ -42,31 +43,38 @@
                 </p>
             </video>  
         <div class="container">
-            <!--<video
-                style="background-color: transparent;"
-                id="intro"
-                class="video-js"
-                controls
-                preload="auto"
-                width="70%"
-                height="auto"
-                poster="logo-video.png"
-                data-setup='{"muted": false}''
-                autoplay
-                muted
-            >
-                <source src="intro.mp4" type="video/mp4" />
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to a
-                    web browser that
-                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
-            </video>-->
-            <img alt="Logo" src="logo.png" fetchpriority="high"/>      
+            <div class="lado-esquerdo">
+                <!--<video
+                    style="background-color: transparent;"
+                    id="intro"
+                    class="video-js"
+                    controls
+                    preload="auto"
+                    width="70%"
+                    height="auto"
+                    poster="logo-video.png"
+                    data-setup='{"muted": false}''
+                    autoplay
+                    muted
+                >
+                    <source src="intro.mp4" type="video/mp4" />
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>-->
+                <img alt="Logo" src="logo.png" fetchpriority="high"/>      
 
-            <h1 class="animate-on-scroll">Transforme seu Escritório Jurídico em uma Máquina de Captação de Clientes</h1>
-            <p class="animate-on-scroll">Estratégias de marketing digital sob medida para advogados que desejam escalar seus resultados e se destacar no mercado competitivo.</p>
-            <a id="target" href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
+                <h1 class="animate-on-scroll">Transforme seu Escritório Jurídico em uma Máquina de Captação de Clientes</h1>
+                <p class="animate-on-scroll">Estratégias de marketing digital sob medida para advogados que desejam escalar seus resultados e se destacar no mercado competitivo.</p>
+                <a id="target" href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
+            </div>
+            <div class="lado-direito">
+                <div class="borda-1"></div>
+                <img class="equipe" src="imgs/image.jpeg">
+                <div class="borda-2"></div>
+            </div>
         </div>
         <div class="icones"></div>
     </section>
@@ -76,6 +84,7 @@
         </div>
     </div>
     <section class="dados">
+        <div class="divisao" style="bottom: 0px;"></div>
         <div class="dados-container">
             <div class="dado-item">
                 <i class="fa-regular fa-calendar-days"></i>
@@ -93,6 +102,7 @@
                 <div class="stat-label">Clientes Satisfeitos</div>
             </div>
         </div>
+        <div class="divisao" style="top: 0px;"></div>
     </section>
     <!-- Features -->
     <section class="features" id="servicos">
@@ -338,6 +348,7 @@ Essa imersão no mercado jurídico é o que nos permite criar estratégias reais
     -->
     <section class="cta-section" id="cta">
         <div class="container">
+            <!--<div id="themis1"></div>-->
             <div class="cta-box animate-on-scroll">
                 <h2 class="animate-on-scroll">Pronto para Transformar seu Escritório?</h2>
                 <p class="animate-on-scroll">Agende agora uma consultoria estratégica gratuita de 30 minutos com nossos especialistas em marketing jurídico. Vamos analisar seu caso e mostrar exatamente como podemos ajudar você a captar mais clientes com o melhor custo-benefício.</p>
@@ -345,6 +356,82 @@ Essa imersão no mercado jurídico é o que nos permite criar estratégias reais
             </div>
         </div>
     </section>
+    <section class="section-video">
+        <div class="section-title">
+            <h2 class="animate-on-scroll"">Histórias de quem <span style="color: var(--secondary);"">já transformou</span> seus resultados</h2>
+            <p class="animate-on-scroll">Depoimentos em vídeo de clientes reais</p>
+        </div>
+
+        <div class="videos-container">
+            <!-- Vídeo 1 -->
+            <div class="video-card animate-on-scroll">
+                <div class="video-preview">
+                    <video class="img" preload="metadata" poster="thumbnail3.jpg">
+                        <source src="depoimento-camila.mp4" type="video/mp4">
+                        <source src="depoimento-camila.webm" type="video/webm">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <div class="client">
+                        <div class="avatar">AP</div>
+                        <div class="client-info">
+                            <h4>Ana Paula</h4>
+                            <span>E-commerce · 45 dias</span>
+                        </div>
+                    </div>
+                    <p class="testimonial">“Saí de R$ 5k para R$ 22k por mês. O método funciona do zero.”</p>
+                    <div class="result">📈 +340% em vendas</div>
+                </div>
+            </div>
+
+            <!-- Vídeo 2 -->
+            <div class="video-card animate-on-scroll">
+                <div class="video-preview">
+                    <img src="https://placehold.co/400x220/1e293b/ffffff?text=Rafael+Lima" alt="Thumb">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <div class="client">
+                        <div class="avatar">RL</div>
+                        <div class="client-info">
+                            <h4>Rafael Lima</h4>
+                            <span>Marketing Digital · 2 meses</span>
+                        </div>
+                    </div>
+                    <p class="testimonial">“Nunca vi um suporte tão bom. Os vídeos mostram tudo passo a passo.”</p>
+                    <div class="result">⭐ Avaliação 5/5</div>
+                </div>
+            </div>
+
+            <!-- Vídeo 3 -->
+            <div class="video-card animate-on-scroll">
+                <div class="video-preview">
+                    <img src="https://placehold.co/400x220/1e293b/ffffff?text=Camila+Santos" alt="Thumb">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <div class="client">
+                        <div class="avatar">CS</div>
+                        <div class="client-info">
+                            <h4>Camila Santos</h4>
+                            <span>Infoprodutora · 30 dias</span>
+                        </div>
+                    </div>
+                    <p class="testimonial">“Consegui lançar meu primeiro curso em 2 semanas. Recomendo demais!”</p>
+                    <div class="result">🚀 Lançamento em 14 dias</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="verified">
+            <div class="verified-item">✓ Depoimentos verificados</div>
+            <div class="verified-item">🎥 +2.300 vídeos de clientes</div>
+            <div class="verified-item">🏆 Nota 4,9/5 (Google)</div>
+        </div>
+    </section>
+    
     <section class="simulador">
         <div class="area" >
             <ul class="circles">
@@ -539,6 +626,14 @@ Essa imersão no mercado jurídico é o que nos permite criar estratégias reais
             </div>
         </div>
     </footer>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/vanilla-tilt.js"></script>
     <script type="text/javascript">
@@ -783,6 +878,188 @@ Essa imersão no mercado jurídico é o que nos permite criar estratégias reais
             // Frases para o carrossel
         });
 
+        import * as THREE from 'three';
+        import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
+
+        // Aguardar o DOM estar completamente carregado
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM carregado, iniciando Three.js...');
+            
+            const container = document.getElementById('themis');
+            if (!container) {
+                console.error('Div #themis não encontrada!');
+                return;
+            }
+            
+            // Criar cena
+            const scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x050b1a);
+            scene.fog = new THREE.FogExp2(0x050b1a, 0.005);
+
+            // Criar câmera
+            const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+            camera.position.set(0, 1.5, 4);
+            camera.lookAt(0, 1, 0);
+
+            // Criar renderizador
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.shadowMap.enabled = true;
+            container.appendChild(renderer.domElement);
+
+            // Iluminação
+            const ambientLight = new THREE.AmbientLight(0x2a2a3e, 0.5);
+            scene.add(ambientLight);
+            
+            const mainLight = new THREE.DirectionalLight(0xfff5e6, 1.2);
+            mainLight.position.set(3, 5, 2);
+            mainLight.castShadow = true;
+            mainLight.shadow.mapSize.width = 1024;
+            mainLight.shadow.mapSize.height = 1024;
+            scene.add(mainLight);
+            
+            const fillLight = new THREE.PointLight(0x4466aa, 0.4);
+            fillLight.position.set(-2, 2, 3);
+            scene.add(fillLight);
+            
+            const rimLight = new THREE.PointLight(0xffaa66, 0.5);
+            rimLight.position.set(1, 2, -2);
+            scene.add(rimLight);
+            
+            // Chão sutil
+            const gridHelper = new THREE.GridHelper(8, 20, 0x4466aa, 0x224466);
+            gridHelper.position.y = -0.8;
+            gridHelper.material.transparent = true;
+            gridHelper.material.opacity = 0.25;
+            scene.add(gridHelper);
+            
+            // Estrelas de fundo
+            const starGeometry = new THREE.BufferGeometry();
+            const starCount = 1500;
+            const starPositions = new Float32Array(starCount * 3);
+            for (let i = 0; i < starCount; i++) {
+                starPositions[i*3] = (Math.random() - 0.5) * 200;
+                starPositions[i*3+1] = (Math.random() - 0.5) * 100;
+                starPositions[i*3+2] = (Math.random() - 0.5) * 60 - 30;
+            }
+            starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+            const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.05, transparent: true, opacity: 0.5 });
+            const stars = new THREE.Points(starGeometry, starMaterial);
+            scene.add(stars);
+            
+            // Variáveis do modelo
+            let currentModel = null;
+            let targetRotationY = 0;
+            let currentRotationY = 0;
+            
+            // Criar modelo substituto (fallback)
+            function createFallbackThemis() {
+                const group = new THREE.Group();
+                
+                // Pedestal
+                const pedestalGeo = new THREE.CylinderGeometry(0.9, 1.0, 0.25, 8);
+                const pedestalMat = new THREE.MeshStandardMaterial({ color: 0xaa8866, metalness: 0.4, roughness: 0.6 });
+                const pedestal = new THREE.Mesh(pedestalGeo, pedestalMat);
+                pedestal.position.y = -0.85;
+                pedestal.castShadow = true;
+                group.add(pedestal);
+                
+                // Corpo
+                const bodyGeo = new THREE.CylinderGeometry(0.55, 0.65, 1.3, 12);
+                const bodyMat = new THREE.MeshStandardMaterial({ color: 0xeeddcc, metalness: 0.1, roughness: 0.4 });
+                const body = new THREE.Mesh(bodyGeo, bodyMat);
+                body.position.y = -0.1;
+                body.castShadow = true;
+                group.add(body);
+                
+                // Cabeça
+                const headGeo = new THREE.SphereGeometry(0.42, 32, 32);
+                const headMat = new THREE.MeshStandardMaterial({ color: 0xffddbb, metalness: 0.05, roughness: 0.3 });
+                const head = new THREE.Mesh(headGeo, headMat);
+                head.position.y = 0.7;
+                head.castShadow = true;
+                group.add(head);
+                
+                // Venda
+                const blindfoldGeo = new THREE.BoxGeometry(0.75, 0.12, 0.08);
+                const blindfoldMat = new THREE.MeshStandardMaterial({ color: 0xcc8866 });
+                const blindfold = new THREE.Mesh(blindfoldGeo, blindfoldMat);
+                blindfold.position.set(0, 0.72, 0.44);
+                blindfold.castShadow = true;
+                group.add(blindfold);
+                
+                return group;
+            }
+            
+            // Carregar modelo FBX
+            const modelPath = './themis.fbx'; // ALTERE PARA O CAMINHO DO SEU ARQUIVO
+            const loader = new FBXLoader();
+            
+            loader.load(modelPath, 
+                (fbx) => {
+                    console.log('✓ Modelo FBX carregado com sucesso!');
+                    currentModel = fbx;
+                    currentModel.scale.set(0.01, 0.01, 0.01);
+                    currentModel.position.set(0, -0.6, 0);
+                    currentModel.traverse((child) => {
+                        if (child.isMesh) {
+                            child.castShadow = true;
+                        }
+                    });
+                    scene.add(currentModel);
+                },
+                (xhr) => {
+                    console.log(`Carregando: ${Math.floor((xhr.loaded / xhr.total) * 100)}%`);
+                },
+                (error) => {
+                    console.error('Erro ao carregar FBX:', error);
+                    console.log('Usando modelo substituto...');
+                    currentModel = createFallbackThemis();
+                    scene.add(currentModel);
+                }
+            );
+            
+            // Controle de rotação pelo scroll
+            function updateRotationFromScroll() {
+                const scrollY = window.scrollY;
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = maxScroll > 0 ? scrollY / maxScroll : 0;
+                targetRotationY = progress * Math.PI * 4; // 2 voltas completas
+            }
+            
+            window.addEventListener('scroll', updateRotationFromScroll);
+            updateRotationFromScroll();
+            
+            // Loop de animação
+            function animate() {
+                const lerpFactor = 0.12;
+                currentRotationY += (targetRotationY - currentRotationY) * lerpFactor;
+                
+                if (currentModel) {
+                    currentModel.rotation.y = currentRotationY;
+                }
+                
+                stars.rotation.y += 0.0003;
+                stars.rotation.x += 0.0002;
+                camera.lookAt(0, 0.8, 0);
+                renderer.render(scene, camera);
+                requestAnimationFrame(animate);
+            }
+            
+            animate();
+            
+            // Redimensionamento
+            window.addEventListener('resize', () => {
+                const width = container.clientWidth;
+                const height = container.clientHeight;
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+                renderer.setSize(width, height);
+            });
+            
+            setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
+        });
     </script>
 
 </body>
