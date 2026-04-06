@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JurisGrouted | Assessoria de Marketing Jurídico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97E;
+      --gold-dark: #A68A3E;
+      --black: #0A0A0A;
+      --black-light: #111111;
+      --black-card: #161616;
+      --gray: #888888;
+      --white: #F5F5F5;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.2rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.10);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.8rem 5%;
+      background: rgba(10, 10, 10, 0.95);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+    }
+
+    .navbar__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .navbar__logo span {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .navbar__links {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .navbar__links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .navbar__links a:hover {
+      color: var(--gold);
+    }
+
+    .navbar__cta {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold) !important;
+      padding: 0.65rem 1.8rem;
+      border-radius: 2px;
+      font-size: 0.8rem !important;
+      letter-spacing: 1.5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .navbar__cta:hover {
+      background: var(--gold);
+      color: var(--black) !important;
+    }
+
+    .navbar__hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .navbar__hamburger span {
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      transition: all 0.3s ease;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 8rem 5% 4rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1300px;
+      width: 100%;
+      align-items: center;
+    }
+
+    .hero__text {
+      max-width: 580px;
+    }
+
+    .hero__badge {
+      display: inline-block;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      color: var(--gold);
+      padding: 0.4rem 1.2rem;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      border-radius: 2px;
+    }
+
+    .hero__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero__subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+    }
+
+    .hero__buttons {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--black);
+      padding: 1rem 2.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.2);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--white);
+      padding: 1rem 2.4rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero__image {
+      position: relative;
+    }
+
+    .hero__image-placeholder {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__image-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .hero__image-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.03) 0%, transparent 50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero__image-label {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -0.5rem;
+      background: var(--gold);
+      color: var(--black);
+      padding: 0.6rem 1.4rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+
+    /* ========== STATS BAR ========== */
+    .stats {
+      padding: 4rem 5%;
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .stats__container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .stats__item-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stats__item-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    /* ========== PROVA SOCIAL (VÍDEOS) ========== */
+    .testimonials {
+      padding: 7rem 5%;
+      position: relative;
+    }
+
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(201, 168, 76, 0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-header__badge {
+      display: inline-block;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      color: var(--gold);
+      padding: 0.4rem 1.2rem;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border-radius: 2px;
+    }
+
+    .section-header__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-header__title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .section-header__desc {
+      font-size: 0.95rem;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .testimonial__card {
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .testimonial__card:hover {
+      border-color: rgba(201, 168, 76, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .testimonial__video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--black-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .testimonial__video::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.8) 100%);
+      pointer-events: none;
+    }
+
+    .testimonial__play {
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(201, 168, 76, 0.1);
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .testimonial__card:hover .testimonial__play {
+      background: var(--gold);
+    }
+
+    .testimonial__play svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--gold);
+      margin-left: 3px;
+      transition: fill 0.3s ease;
+    }
+
+    .testimonial__card:hover .testimonial__play svg {
+      fill: var(--black);
+    }
+
+    .testimonial__video span {
+      font-size: 0.7rem;
+      color: var(--gray);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      z-index: 1;
+      opacity: 0.6;
+    }
+
+    .testimonial__info {
+      padding: 1.5rem;
+    }
+
+    .testimonial__name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .testimonial__role {
+      font-size: 0.78rem;
+      color: var(--gray);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .testimonial__stars {
+      display: flex;
+      gap: 2px;
+      margin-top: 0.8rem;
+    }
+
+    .testimonial__stars svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--gold);
+    }
+
+    /* ========== SERVIÇOS ========== */
+    .services {
+      padding: 7rem 5%;
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .service__card {
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.08);
+      padding: 2.5rem 2rem;
+      border-radius: 4px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service__card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .service__card:hover::before {
+      opacity: 1;
+    }
+
+    .service__card:hover {
+      border-color: rgba(201, 168, 76, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .service__icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--gold);
+    }
+
+    .service__icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .service__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .service__desc {
+      font-size: 0.85rem;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ========== CTA SECTION ========== */
+    .cta-section {
+      padding: 7rem 5%;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-section__container {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white);
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .cta-section__title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .cta-section__desc {
+      font-size: 1rem;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      padding: 3rem 5%;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .footer__container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    .footer__logo span {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .footer__text {
+      font-size: 0.78rem;
+      color: var(--gray);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer__links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer__links a:hover {
+      color: var(--gold);
+    }
+
+    /* ========== MOBILE RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero__subtitle, .hero__buttons, .hero__badge {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero__buttons {
+        justify-content: center;
+      }
+
+      .hero__image {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .stats__container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar__links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 10, 10, 0.97);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .navbar__links.active {
+        display: flex;
+      }
+
+      .navbar__hamburger {
+        display: flex;
+        z-index: 1001;
+      }
+
+      .testimonials__grid,
+      .services__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .stats__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .stats__item-number {
+        font-size: 2.2rem;
+      }
+
+      .footer__container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="navbar__logo">JURIS<span>GROUTED</span></a>
+    <ul class="navbar__links" id="navLinks">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#contato" class="navbar__cta">Fale Conosco</a></li>
+    </ul>
+    <div class="navbar__hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__container">
+      <div class="hero__text">
+        <div class="hero__badge">Marketing Jurídico de Performance</div>
+        <h1 class="hero__title">
+          Transformamos seu <em>escritório de advocacia</em> em uma marca de autoridade
+        </h1>
+        <p class="hero__subtitle">
+          Estratégias de marketing digital especializadas para advogados que desejam atrair clientes qualificados, fortalecer sua reputação e crescer de forma ética e consistente.
+        </p>
+        <div class="hero__buttons">
+          <a href="#contato" class="btn-primary">Agendar Consultoria &rarr;</a>
+          <a href="#servicos" class="btn-secondary">Nossos Serviços</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <!-- FOTO DA EQUIPE -->
+        <div class="hero__image-placeholder">
+          <img src="hero-team.jpeg" alt="Equipe JurisGrouted - Assessoria de Marketing Jurídico">
+        </div>
+        <div class="hero__image-label">Equipe JurisGrouted</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats__container">
+      <div class="stats__item fade-up">
+        <div class="stats__item-number"><span class="counter" data-target="200" data-suffix="+">0</span></div>
+        <div class="stats__item-label">Escritórios Atendidos</div>
+      </div>
+      <div class="stats__item fade-up">
+        <div class="stats__item-number"><span class="counter" data-target="3" data-suffix="x">0</span></div>
+        <div class="stats__item-label">Média de Crescimento</div>
+      </div>
+      <div class="stats__item fade-up">
+        <div class="stats__item-number"><span class="counter" data-target="15" data-suffix="k+">0</span></div>
+        <div class="stats__item-label">Leads Gerados</div>
+      </div>
+      <div class="stats__item fade-up">
+        <div class="stats__item-number"><span class="counter" data-target="98" data-suffix="%">0</span></div>
+        <div class="stats__item-label">Taxa de Satisfação</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVA SOCIAL - DEPOIMENTOS EM VÍDEO -->
+  <section class="testimonials" id="depoimentos">
+    <div class="section-header fade-up">
+      <div class="section-header__badge">Prova Social</div>
+      <h2 class="section-header__title">O que dizem os <em>advogados</em> que confiam em nós</h2>
+      <p class="section-header__desc">Veja como transformamos a presença digital de escritórios de advocacia em todo o Brasil.</p>
+    </div>
+    <div class="testimonials__grid">
+
+      <!-- Depoimento 1 -->
+      <div class="testimonial__card fade-up">
+        <div class="testimonial__video">
+          <video
+            src="prova-social1.webm"
+            preload="metadata"
+            playsinline
+            controls
+            style="width:100%;height:100%;object-fit:cover;"
+          ></video>
+        </div>
+        <div class="testimonial__info">
+          <div class="testimonial__name">Dr. Carlos Mendes</div>
+          <div class="testimonial__role">Direito Trabalhista — São Paulo, SP</div>
+          <div class="testimonial__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="testimonial__card fade-up">
+        <div class="testimonial__video">
+          <video
+            src="prova-social2.webm"
+            preload="metadata"
+            playsinline
+            controls
+            style="width:100%;height:100%;object-fit:cover;"
+          ></video>
+        </div>
+        <div class="testimonial__info">
+          <div class="testimonial__name">Dra. Fernanda Oliveira</div>
+          <div class="testimonial__role">Direito da Família — Belo Horizonte, MG</div>
+          <div class="testimonial__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 3 -->
+      <div class="testimonial__card fade-up">
+        <div class="testimonial__video">
+          <video
+            src="prova-social3.webm"
+            preload="metadata"
+            playsinline
+            controls
+            style="width:100%;height:100%;object-fit:cover;"
+          ></video>
+        </div>
+        <div class="testimonial__info">
+          <div class="testimonial__name">Dr. Roberto Almeida</div>
+          <div class="testimonial__role">Direito Empresarial — Curitiba, PR</div>
+          <div class="testimonial__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services" id="servicos">
+    <div class="section-header fade-up">
+      <div class="section-header__badge">Serviços</div>
+      <h2 class="section-header__title">Soluções completas para o <em>marketing</em> do seu escritório</h2>
+      <p class="section-header__desc">Tudo que você precisa para se posicionar com autoridade e atrair clientes ideais dentro da ética da OAB.</p>
+    </div>
+    <div class="services__grid">
+
+      <div class="service__card fade-up">
+        <div class="service__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="service__title">Tráfego Pago</h3>
+        <p class="service__desc">Campanhas estratégicas no Google Ads e Meta Ads segmentadas para o público jurídico, respeitando as normas da OAB.</p>
+      </div>
+
+      <div class="service__card fade-up">
+        <div class="service__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3 class="service__title">Conteúdo Estratégico</h3>
+        <p class="service__desc">Produção de artigos, posts e materiais educativos que posicionam você como referência na sua área.</p>
+      </div>
+
+      <div class="service__card fade-up">
+        <div class="service__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="service__title">SEO Jurídico</h3>
+        <p class="service__desc">Otimização para buscadores com foco em termos jurídicos, garantindo visibilidade orgânica para seu escritório.</p>
+      </div>
+
+      <div class="service__card fade-up">
+        <div class="service__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3 class="service__title">Social Media</h3>
+        <p class="service__desc">Gestão completa das redes sociais com planejamento, criação e publicação de conteúdo informativo.</p>
+      </div>
+
+      <div class="service__card fade-up">
+        <div class="service__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3 class="service__title">Branding Pessoal</h3>
+        <p class="service__desc">Construção da identidade visual e posicionamento de marca pessoal para advogados que querem se destacar.</p>
+      </div>
+
+      <div class="service__card fade-up">
+        <div class="service__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 class="service__title">Sites Profissionais</h3>
+        <p class="service__desc">Desenvolvimento de sites institucionais modernos, otimizados e com foco em conversão para escritórios.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section" id="contato">
+    <div class="cta-section__container fade-up">
+      <div class="section-header__badge">Pronto para começar?</div>
+      <h2 class="cta-section__title">Posicione seu escritório no próximo <em>nível</em></h2>
+      <p class="cta-section__desc">
+        Agende uma consultoria gratuita e descubra como podemos ajudar seu escritório a atrair mais clientes de forma estratégica e ética.
+      </p>
+      <a href="https://wa.me/5500000000000" target="_blank" class="btn-primary">Falar no WhatsApp &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">JURIS<span>GROUTED</span></div>
+      <p class="footer__text">&copy; 2026 JurisGrouted. Todos os direitos reservados.</p>
+      <ul class="footer__links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Sequential animated counters
+    function animateCounter(el, target, suffix, duration, delay) {
+      setTimeout(() => {
+        let start = 0;
+        const step = target / (duration / 16);
+        const interval = setInterval(() => {
+          start += step;
+          if (start >= target) {
+            start = target;
+            clearInterval(interval);
+          }
+          el.textContent = Math.floor(start) + suffix;
+        }, 16);
+      }, delay);
+    }
+
+    let countersStarted = false;
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersStarted) {
+          countersStarted = true;
+          const counters = document.querySelectorAll('.counter');
+          const durations = [1500, 1200, 1400, 1300];
+          let delay = 0;
+          counters.forEach((counter, i) => {
+            const target = parseInt(counter.dataset.target);
+            const suffix = counter.dataset.suffix || '';
+            animateCounter(counter, target, suffix, durations[i], delay);
+            delay += durations[i] + 300;
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) statsObserver.observe(statsSection);
+  </script>
+</body>
+</html>

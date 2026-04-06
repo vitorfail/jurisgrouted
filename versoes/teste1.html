@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#faq -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JurisGrouted | Marketing Jurídico de Resultado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="./JurisGrowth _ Marketing Jurídico de Resultado_files/css2" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97E;
+      --gold-dark: #A68A3E;
+      --black: #0A0A0A;
+      --black-light: #141414;
+      --black-card: #1A1A1A;
+      --gray: #888;
+      --white: #F5F5F5;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.25rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+      transition: background 0.3s;
+    }
+
+    .navbar .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .navbar .logo span {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links .btn-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: 0.65rem 1.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-links .btn-cta:hover {
+      background: var(--gold-light);
+      color: var(--black);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .menu-toggle span {
+      width: 26px;
+      height: 2px;
+      background: var(--gold);
+      transition: 0.3s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 5% 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .logo{
+      height: auto;
+      width: 150px;
+      margin-bottom: 40px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-badge {
+      width: fit-content;
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text h1 .gold {
+      color: var(--gold);
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--black);
+      padding: 1rem 2.4rem;
+      border: none;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-primary i{
+      margin-right: 10px;
+      font-size: 25px;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--gold);
+      padding: 1rem 2.4rem;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(201, 168, 76, 0.1);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border: 1px solid rgba(255, 187, 0, 0.514);
+      border-radius: 8px;
+    }
+
+    /* decor frame */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -20px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-radius: 8px;
+      z-index: -1;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.12);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+      padding: 3.5rem 5%;
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      position: relative;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: rgba(201, 168, 76, 0.15);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--gray);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── SOCIAL PROOF / VIDEOS ── */
+    .social-proof {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 7rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header .overline {
+      color: var(--gold);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 .gold {
+      color: var(--gold);
+    }
+
+    .section-header p {
+      color: var(--gray);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .videos-grid {
+      margin-bottom: 50px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .video-card {
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .video-card:hover {
+      border-color: rgba(201, 168, 76, 0.35);
+      transform: translateY(-4px);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: var(--black);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-wrapper .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 2;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .video-wrapper .play-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .play-overlay .play-btn {
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(201, 168, 76, 0.15);
+      backdrop-filter: blur(4px);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .video-card:hover .play-btn {
+      background: rgba(201, 168, 76, 0.25);
+      transform: scale(1.08);
+    }
+
+    .play-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--gold);
+      margin-left: 4px;
+    }
+
+    .video-info {
+      padding: 1.4rem;
+    }
+
+    .video-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .video-info .role {
+      font-size: 0.8rem;
+      color: var(--gold-dark);
+      font-weight: 400;
+    }
+
+    .video-info .result {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    /* ── PAIN POINTS ── */
+    .pain-section {
+      padding: 7rem 5%;
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .pain-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pain-grid {
+      margin-bottom: 2.0rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .pain-item {
+      display: flex;
+      gap: 1.2rem;
+      padding: 1.8rem;
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.08);
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+
+    .pain-item:hover {
+      border-color: rgba(201, 168, 76, 0.25);
+    }
+
+    .pain-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    .pain-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .pain-item p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* ── SERVICES ── */
+    .services-section {
+      padding: 7rem 5%;
+    }
+
+    .services-inner {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+      margin-bottom: 2.0rem;
+    }
+
+    .service-card {
+      padding: 2.5rem 2rem;
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.08);
+      border-radius: 8px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s, width 0.3s;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+      width: 100%;
+    }
+
+    .service-card:hover {
+      border-color: rgba(201, 168, 76, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.5rem;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .service-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── METHOD ── */
+    .method-section {
+      padding: 7rem 5%;
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .method-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 4rem;
+      padding-left: 3rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -3rem;
+      top: 0;
+      width: 31px;
+      height: 31px;
+      background: var(--black-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .timeline-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── AREAS ── */
+    .areas-section {
+      padding: 7rem 5%;
+    }
+
+    .areas-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 4rem;
+    }
+
+    .area-tag {
+      padding: 1.2rem;
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 6px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      color: var(--white);
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .area-tag:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      padding: 7rem 5%;
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .faq-inner {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: left;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+      color: var(--gold);
+    }
+
+    .faq-question .icon {
+      color: var(--gold);
+      font-size: 1.3rem;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .faq-question.active .icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 7rem 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+
+    .cta-inner p {
+      color: var(--gray);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    /* ── RESPONSIVE ── */
+    .footer {
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      padding: 3rem 5%;
+      text-align: center;
+    }
+
+    .footer .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .footer p {
+      font-size: 0.8rem;
+      color: var(--gray);
+      font-weight: 300;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .hero-image::after {
+        display: none;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+
+      .stat-item::after {
+        display: none;
+      }
+
+      .videos-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--black);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+      .hero-text{
+        align-items: center;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        padding-left: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#" class="logo">Juris<span>Growth</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#sobre">Sobre</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#servicos">Serviços</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#metodo">Método</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#depoimentos">Depoimentos</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#faq">FAQ</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#contato" class="btn-cta">Agendar Reunião</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="sobre">
+    <div class="hero-inner">
+      <div class="hero-text fade-in visible">
+        <img class="logo" src="logo.png" />
+        <span class="hero-badge fade-up">Assessoria de Marketing Jurídico</span>
+        <h1 class="fade-up">Transformamos seu <span class="gold">escritório</span> em uma referência <span class="gold">autoridade</span> digital</h1>
+        <p class="fade-up">Estratégias de marketing digital especializadas para advogados e escritórios de advocacia que desejam atrair mais clientes com ética e posicionamento premium.</p>
+        <div class="hero-buttons fade-up">
+          <a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#contato" class="btn-primary">Quero Mais Clientes</a>
+          <a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#resultados" class="btn-secondary">Ver Resultados</a>
+        </div>
+      </div>
+      <div class="hero-image fade-in fade-up">
+        <img src="image.jpeg" alt="Equipe JurisGrowth" class="hero-photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar" id="resultados">
+    <div class="stats-inner">
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="150" data-suffix="+">150+</div>
+        <div class="stat-label">Escritórios Atendidos</div>
+      </div>
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="3" data-suffix="M+">3M+</div>
+        <div class="stat-label">Leads Gerados</div>
+      </div>
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="12" data-suffix="x">12x</div>
+        <div class="stat-label">ROI Médio dos Clientes</div>
+      </div>
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="98" data-suffix="%">98%</div>
+        <div class="stat-label">Taxa de Satisfação</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain-section">
+    <div class="pain-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">O problema</span>
+        <h2 class="fade-up">Seu escritório <span class="gold">invisível</span> na internet?</h2>
+        <p class="fade-up">A maioria dos advogados excelentes não consegue atrair clientes porque não tem presença digital estratégica.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Sem autoridade online</h4>
+            <p>Clientes em potencial pesquisam no Google e não encontram seu nome — vão direto para o concorrente.</p>
+          </div>
+        </div>
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Dependência de indicação</h4>
+            <p>Quando o marketing é só o boca a boca, o fluxo de clientes fica imprevisível e fora do seu controle.</p>
+          </div>
+        </div>
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Perdido no digital</h4>
+            <p>Google Ads, SEO, redes sociais, conteúdo... São tantos canais que sem estratégia vira dinheiro jogado fora.</p>
+          </div>
+        </div>
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Medo do julgamento da OAB</h4>
+            <p>Muitos advogados travam por não saber o que é permitido — mas existe marketing jurídico ético e eficaz.</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary"><i class="fa-brands fa-whatsapp"></i>Nós temos a solução</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="servicos">
+    <div class="services-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">Serviços</span>
+        <h2 class="fade-up">O que entregamos para <span class="gold">escalar</span> seu escritório</h2>
+        <p class="fade-up">Estratégias completas dentro das normas da OAB para transformar seu escritório em uma referência digital.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          </div>
+          <h4>SEO Jurídico</h4>
+          <p>Posicione seu site nas primeiras posições do Google para termos que seus clientes pesquisam.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"></path></svg>
+          </div>
+          <h4>Google Ads</h4>
+          <p>Campanhas otimizadas para captar clientes no momento exato em que buscam um advogado.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="m8 21 4-4 4 4"></path></svg>
+          </div>
+          <h4>Redes Sociais</h4>
+          <p>Conteúdo estratégico que constrói autoridade e gera conexão com seu público alvo.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          </div>
+          <h4>Conteúdo &amp; Copy</h4>
+          <p>Artigos, posts e páginas escritas por especialistas que entendem do marketing jurídico.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+          </div>
+          <h4>Landing Pages</h4>
+          <p>Páginas de alta conversão otimizadas para transformar visitantes em clientes reais.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4>Consultoria Premium</h4>
+          <p>Acompanhamento personalizado com análise de métricas e ajustes estratégicos contínuos.</p>
+        </div>
+      </div>
+      <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary fade-up"><i class="fa-brands fa-whatsapp"></i>Consulta gratuita!</a>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="method-section" id="metodo">
+    <div class="method-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">Método</span>
+        <h2 class="fade-up">Como <span class="gold">funciona</span> nossa assessoria</h2>
+        <p class="fade-up">Um processo claro e estruturado para levar seu escritório do zero ao resultado consistente.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">1</div>
+          <h4>Diagnóstico &amp; Estratégia</h4>
+          <p>Analisamos seu escritório, concorrentes e mercado para desenhar uma estratégia sob medida.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">2</div>
+          <h4>Posicionamento Digital</h4>
+          <p>Construímos sua presença online — site profissional, redes sociais, Google Meu Negócio e mais.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">3</div>
+          <h4>Aquisição de Clientes</h4>
+          <p>Ativamos campanhas de tráfego pago e orgânico para gerar contatos qualificados todos os dias.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">4</div>
+          <h4>Otimização &amp; Escala</h4>
+          <p>Monitoramos, testamos e refinamos continuamente para maximizar o ROI do seu investimento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="areas-section">
+    <div class="areas-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">Áreas de atuação</span>
+        <h2 class="fade-up">Experiência em diversas <span class="gold">áreas do Direito</span></h2>
+        <p class="fade-up">Já assessoramos escritórios das mais variadas especialidades jurídicas.</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-tag fade-up">Direito Trabalhista</div>
+        <div class="area-tag fade-up">Direito de Família</div>
+        <div class="area-tag fade-up">Direito Previdenciário</div>
+        <div class="area-tag fade-up">Direito Criminal</div>
+        <div class="area-tag fade-up">Direito Civil</div>
+        <div class="area-tag fade-up">Direito Empresarial</div>
+        <div class="area-tag fade-up">Direito Tributário</div>
+        <div class="area-tag fade-up">Direito do Consumidor</div>
+        <div class="area-tag fade-up">Direito Imobiliário</div>
+        <div class="area-tag fade-up">Direito Médico</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF / VIDEOS -->
+  <section class="social-proof" id="depoimentos">
+    <div class="section-header fade-in visible">
+      <span class="overline fade-up">Depoimentos</span>
+      <h2 class="fade-up">Quem confia na <span class="gold">JurisGrouted</span> fala</h2>
+      <p class="fade-up">Veja o que advogados de diferentes áreas dizem sobre os resultados que alcançaram com nossa assessoria.</p>
+    </div>
+
+    <div class="videos-grid fade-up">
+      <!-- Video 1 -->
+      <div class="video-card fade-in visible">
+        <div class="video-wrapper" data-video="">
+          <video src="prova-social.webm" preload="metadata" playsinline=""></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <h4>Dra. Mabel</h4>
+          <span class="role">Advogado Previdenciarista — RJ</span>
+          <p class="result">"Em 3 meses, triplicamos nossos contatos qualificados. O investimento se pagou nos primeiros 15 dias"</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card fade-in visible">
+        <div class="video-wrapper" data-video="">
+          <video src="prova-social2.webm" preload="metadata" playsinline=""></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <h4>Dr. Carlos</h4>
+          <span class="role">Advogado Previdenciarista — MG</span>
+          <p class="result">"Finalmente entendi como o marketing jurídico funciona. Hoje tenho agenda cheia e clientes que me procuram."</p>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card fade-in visible">
+        <div class="video-wrapper" data-video="">
+          <video src="prova-social3.webm" preload="metadata" playsinline=""></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <h4>Dr. Pedro</h4>
+          <span class="role">Advogado Trabalhista - CE</span>
+          <p class="result">"Antes a Nossa captação de clientes era toda baseada em indicação. Agora temos um fluxo contínuo de clientes. "</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary fade-up"><i class="fa-brands fa-whatsapp"></i>Junte-se a Eles!</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline">Dúvidas</span>
+        <h2>Perguntas <span class="gold">frequentes</span></h2>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Marketing jurídico é permitido pela OAB?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim! O marketing informativo é autorizado pelo Código de Ética da OAB. Nosso trabalho é garantir que toda estratégia esteja 100% em conformidade com as normas vigentes.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Em quanto tempo vejo resultados?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Com Google Ads, os primeiros contatos podem vir em 48 horas. Para SEO e orgânico, os resultados consistentes surgem entre 60 e 120 dias.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Qual o investimento mínimo para começar?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Trabalhamos com planos a partir de R$ 1.500/mês para gestão de marketing, além do investimento direto em anúncios — que você controla totalmente.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Vocês trabalham com quais áreas do Direito?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Todas. Atuamos com escritórios de diversas áreas: trabalhista, família, previdenciário, criminal, civil, tributário e muito mais.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question active">
+          A assessoria é 100% online?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer open">
+          <p>Sim, atendemos advogados em todo o Brasil. As reuniões, relatórios e acompanhamentos são feitos de forma remota com total eficiência.</p>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contato">
+    <div class="cta-inner fade-in visible">
+      <h2>Pronto para colocar seu escritório no <span class="gold">próximo nível</span>?</h2>
+      <p>Agende uma conversa gratuita e descubra como podemos atrair mais clientes qualificados para sua advocacia.</p>
+      <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary 5511930535329"><i class="fa-brands fa-whatsapp"></i>Falar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="logo">JurisGrouted</div>
+    <p>Assessoria de Marketing Jurídico — Todos os direitos reservados © 2026</p>
+  </footer>
+
+  <script>
+    // ── MOBILE MENU ──
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+
+    // ── ANIMATED COUNTERS ──
+    const counters = document.querySelectorAll('.stat-number[data-target]');
+    let countersStarted = new Set();
+
+    function animateCounter(el) {
+      if (countersStarted.has(el)) return;
+      countersStarted.add(el);
+
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 2000;
+      const startTime = performance.now();
+
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+
+      function tick(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutExpo(progress);
+        const current = Math.floor(easedProgress * target);
+
+        el.textContent = current + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        }
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+    // ── FAQ ACCORDION ──
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        btn.classList.toggle('active');
+        answer.classList.toggle('open');
+
+        document.querySelectorAll('.faq-question').forEach(other => {
+          if (other !== btn) {
+            other.classList.remove('active');
+            other.nextElementSibling.classList.remove('open');
+          }
+        });
+      });
+    });
+
+    // ── VIDEO PLAYER ──
+    const videoWrappers = document.querySelectorAll('[data-video]');
+
+    function stopAllVideos() {
+      videoWrappers.forEach(wrapper => {
+        const video = wrapper.querySelector('video');
+        const overlay = wrapper.querySelector('.play-overlay');
+        video.pause();
+        overlay.classList.remove('hidden');
+      });
+    }
+
+    videoWrappers.forEach(wrapper => {
+      const video = wrapper.querySelector('video');
+      const overlay = wrapper.querySelector('.play-overlay');
+
+      wrapper.addEventListener('click', () => {
+        if (video.paused) {
+          stopAllVideos();
+          video.play();
+          overlay.classList.add('hidden');
+        } else {
+          video.pause();
+          overlay.classList.remove('hidden');
+        }
+      });
+
+      video.addEventListener('ended', () => {
+        overlay.classList.remove('hidden');
+      });
+    });
+  </script>
+
+
+</body></html>
