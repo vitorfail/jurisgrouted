@@ -1,1066 +1,1446 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Author: Vitor Manoel de Andrade Souza,
-    Illustrator: P. Picture, Category: Serviços de Marketing,
-    Length: 1 pages">
-    <title>Juris Grouted | Marketing Jurídico de Alto Impacto</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-    <link href="css/video-js.css" rel="stylesheet" /> 
-    <link href="css/ponteiros.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" /> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <style>
-    </style>
+<!-- saved from url=(0067)file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#faq -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JurisGrouted | Marketing Jurídico de Resultado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="./JurisGrowth _ Marketing Jurídico de Resultado_files/css2" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C97E;
+      --gold-dark: #A68A3E;
+      --black: #0A0A0A;
+      --black-light: #141414;
+      --black-card: #1A1A1A;
+      --gray: #888;
+      --white: #F5F5F5;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.25rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+      transition: background 0.3s;
+    }
+
+    .navbar .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .navbar .logo span {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links .btn-cta {
+      background: var(--gold);
+      color: var(--black);
+      padding: 0.65rem 1.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-links .btn-cta:hover {
+      background: var(--gold-light);
+      color: var(--black);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .menu-toggle span {
+      width: 26px;
+      height: 2px;
+      background: var(--gold);
+      transition: 0.3s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 5% 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .logo{
+      height: auto;
+      width: 150px;
+      margin-bottom: 40px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-badge {
+      width: fit-content;
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text h1 .gold {
+      color: var(--gold);
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--black);
+      padding: 1rem 2.4rem;
+      border: none;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-primary i{
+      margin-right: 10px;
+      font-size: 25px;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--gold);
+      padding: 1rem 2.4rem;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(201, 168, 76, 0.1);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border: 1px solid rgba(255, 187, 0, 0.514);
+      border-radius: 8px;
+    }
+
+    /* decor frame */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -20px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+      border-radius: 8px;
+      z-index: -1;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.12);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+      padding: 3.5rem 5%;
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      position: relative;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: rgba(201, 168, 76, 0.15);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--gray);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── SOCIAL PROOF / VIDEOS ── */
+    .social-proof {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 7rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-header .overline {
+      color: var(--gold);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 .gold {
+      color: var(--gold);
+    }
+
+    .section-header p {
+      color: var(--gray);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .videos-grid {
+      margin-bottom: 50px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .video-card {
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .video-card:hover {
+      border-color: rgba(201, 168, 76, 0.35);
+      transform: translateY(-4px);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: var(--black);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-wrapper .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 2;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .video-wrapper .play-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .play-overlay .play-btn {
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(201, 168, 76, 0.15);
+      backdrop-filter: blur(4px);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .video-card:hover .play-btn {
+      background: rgba(201, 168, 76, 0.25);
+      transform: scale(1.08);
+    }
+
+    .play-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--gold);
+      margin-left: 4px;
+    }
+
+    .video-info {
+      padding: 1.4rem;
+    }
+
+    .video-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .video-info .role {
+      font-size: 0.8rem;
+      color: var(--gold-dark);
+      font-weight: 400;
+    }
+
+    .video-info .result {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    /* ── PAIN POINTS ── */
+    .pain-section {
+      padding: 7rem 5%;
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .pain-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pain-grid {
+      margin-bottom: 2.0rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .pain-item {
+      display: flex;
+      gap: 1.2rem;
+      padding: 1.8rem;
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.08);
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+
+    .pain-item:hover {
+      border-color: rgba(201, 168, 76, 0.25);
+    }
+
+    .pain-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    .pain-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .pain-item p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* ── SERVICES ── */
+    .services-section {
+      padding: 7rem 5%;
+    }
+
+    .services-inner {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+      margin-bottom: 2.0rem;
+    }
+
+    .service-card {
+      padding: 2.5rem 2rem;
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.08);
+      border-radius: 8px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s, width 0.3s;
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+      width: 100%;
+    }
+
+    .service-card:hover {
+      border-color: rgba(201, 168, 76, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 1.5rem;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .service-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card p {
+      font-size: 0.85rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── METHOD ── */
+    .method-section {
+      padding: 7rem 5%;
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .method-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 4rem;
+      padding-left: 3rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -3rem;
+      top: 0;
+      width: 31px;
+      height: 31px;
+      background: var(--black-light);
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .timeline-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── AREAS ── */
+    .areas-section {
+      padding: 7rem 5%;
+    }
+
+    .areas-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 4rem;
+    }
+
+    .area-tag {
+      padding: 1.2rem;
+      background: var(--black-card);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      border-radius: 6px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      color: var(--white);
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .area-tag:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      padding: 7rem 5%;
+      background: var(--black-light);
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .faq-inner {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: left;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+      color: var(--gold);
+    }
+
+    .faq-question .icon {
+      color: var(--gold);
+      font-size: 1.3rem;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .faq-question.active .icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      padding: 7rem 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+
+    .cta-inner p {
+      color: var(--gray);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    /* ── RESPONSIVE ── */
+    .footer {
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      padding: 3rem 5%;
+      text-align: center;
+    }
+
+    .footer .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .footer p {
+      font-size: 0.8rem;
+      color: var(--gray);
+      font-weight: 300;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .hero-image::after {
+        display: none;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+
+      .stat-item::after {
+        display: none;
+      }
+
+      .videos-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--black);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+      .hero-text{
+        align-items: center;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        padding-left: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div id="themis"></div>
-        <div class="fundo-preto"></div>
-            <video
-                style="background-color: transparent;"
-                id="back"
-                class="video-js"
-                controls
-                preload="auto"
-                width="70%"
-                height="auto"
-                poster="logo-video.png"
-                data-setup='{"controls": false}'
-                autoplay
-                muted
-                loop>
-                <source src="fundo.webm" type="video/webm" />
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to a
-                    web browser that
-                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                </p>
-            </video>  
-        <div class="container">
-            <div class="lado-esquerdo">
-                <!--<video
-                    style="background-color: transparent;"
-                    id="intro"
-                    class="video-js"
-                    controls
-                    preload="auto"
-                    width="70%"
-                    height="auto"
-                    poster="logo-video.png"
-                    data-setup='{"muted": false}''
-                    autoplay
-                    muted
-                >
-                    <source src="intro.mp4" type="video/mp4" />
-                    <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a
-                        web browser that
-                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                    </p>
-                </video>-->
-                <img alt="Logo" src="logo.png" fetchpriority="high"/>      
 
-                <h1 class="animate-on-scroll">Transforme seu Escritório Jurídico em uma Máquina de Captação de Clientes</h1>
-                <p class="animate-on-scroll">Estratégias de marketing digital sob medida para advogados que desejam escalar seus resultados e se destacar no mercado competitivo.</p>
-                <a id="target" href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
-            </div>
-            <div class="lado-direito">
-                <div class="borda-1"></div>
-                <img class="equipe" src="imgs/image.jpeg">
-                <div class="borda-2"></div>
-            </div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#" class="logo">Juris<span>Growth</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#sobre">Sobre</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#servicos">Serviços</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#metodo">Método</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#depoimentos">Depoimentos</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#faq">FAQ</a></li>
+      <li><a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#contato" class="btn-cta">Agendar Reunião</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="sobre">
+    <div class="hero-inner">
+      <div class="hero-text fade-in visible">
+        <img class="logo" src="logo.png" />
+        <span class="hero-badge fade-up">Assessoria de Marketing Jurídico</span>
+        <h1 class="fade-up">Transformamos seu <span class="gold">escritório</span> em uma referência <span class="gold">autoridade</span> digital</h1>
+        <p class="fade-up">Estratégias de marketing digital especializadas para advogados e escritórios de advocacia que desejam atrair mais clientes com ética e posicionamento premium.</p>
+        <div class="hero-buttons fade-up">
+          <a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#contato" class="btn-primary">Quero Mais Clientes</a>
+          <a href="file:///C:/Users/Alisson/Desktop/jurisgrowth-landing/index.html#resultados" class="btn-secondary">Ver Resultados</a>
         </div>
-        <div class="icones"></div>
-    </section>
-    <div class="carousel-container">
-        <div class="carousel-track" id="carouselTrack">
-            <!-- As frases serão duplicadas via JavaScript para criar o efeito infinito -->
-        </div>
+      </div>
+      <div class="hero-image fade-in fade-up">
+        <img src="image.jpeg" alt="Equipe JurisGrowth" class="hero-photo">
+      </div>
     </div>
-    <section class="dados">
-        <div class="divisao" style="bottom: 0px;"></div>
-        <div class="dados-container">
-            <div class="dado-item">
-                <i class="fa-regular fa-calendar-days"></i>
-                <div class="stat-number dourado" id="numero1">0+</div>
-                <div class="stat-label">Anos de Experiência</div>
-            </div>
-            <div class="dado-item">
-                <i class="fa-solid fa-money-bill-1-wave"></i>
-                <div class="stat-number dourado" id="numero2">+ R$ </div>
-                <div class="stat-label">Valor Investido em Tráfego</div>
-            </div>
-            <div class="dado-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <div class="stat-number dourado" id="numero3">0%</div>
-                <div class="stat-label">Clientes Satisfeitos</div>
-            </div>
-        </div>
-        <div class="divisao" style="top: 0px;"></div>
-    </section>
-    <!-- Features -->
-    <section class="features" id="servicos">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="animate-on-scroll">Nossos Serviços Especializados</h2>
-                <div class="linha" >
-                    <img src="imgs/linha.png" id="linha" alt="Linhas"/>
-                </div>
-                <p class="animate-on-scroll">Soluções exclusivas desenvolvidas para atender as necessidades específicas do mercado jurídico</p>
-            </div>
-            <div class="features-grid">
-                <div class="card">
-                    <div class="feature-icon">
-                        <i class="fas fa-ad"></i>
-                    </div>
-                    <h3>Gestão de Tráfego Pago</h3>
-                    <p>Criamos campanhas altamente segmentadas para trazer clientes qualificados com o melhor custo-benefício.</p>
-                </div>
-                <div class="card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mail-bulk"></i>
-                    </div>
-                    <h3>Automação de Captação</h3>
-                    <p>Sistemas automatizados que nutrem leads 24/7 e convertem consultas em clientes pagantes.</p>
-                </div>
-                <div class="card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Análise de Dados</h3>
-                    <p>Relatórios mensais com métricas claras sobre o retorno de cada investimento em marketing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Results -->
-    <section class="results" id="resultados">
-        <div class="container">
-            <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                <h1>Nossa estratégia se faz <strong>Presente</strong></h1>
-                <p>Estamos onde a advocacia evolui.
+  </section>
 
-Participamos ativamente do evento da OAB Crato sobre Transformação da Advocacia no Mundo Digital, conduzido por Dr. Iago Capistrano e Dr. Marcos Rochel.
+  <!-- STATS BAR -->
+  <section class="stats-bar" id="resultados">
+    <div class="stats-inner">
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="150" data-suffix="+">150+</div>
+        <div class="stat-label">Escritórios Atendidos</div>
+      </div>
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="3" data-suffix="M+">3M+</div>
+        <div class="stat-label">Leads Gerados</div>
+      </div>
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="12" data-suffix="x">12x</div>
+        <div class="stat-label">ROI Médio dos Clientes</div>
+      </div>
+      <div class="stat-item fade-in visible">
+        <div class="stat-number fade-up" data-target="98" data-suffix="%">98%</div>
+        <div class="stat-label">Taxa de Satisfação</div>
+      </div>
+    </div>
+  </section>
 
-Essa imersão no mercado jurídico é o que nos permite criar estratégias reais de crescimento para advogados.</p>
-            </div>
-            <div style="display: flex;">
-                <div class="slide" style="background-image: url('imgs/evento4.jpg');">
-                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
-                </div>
-                <div class="slide" style="background-image: url('imgs/evento3.jpg');">
-                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
-                </div>
-                <div class="slide" style="background-image: url('imgs/evento1.jpg');">
-                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
-                </div>
-                <div class="slide" style="background-image: url('imgs/evento5.jpg');">
-                        <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
-                </div>
-                <div class="slide" style="background-image: url('imgs/evento6.jpg');">
-                    <h3>Evento Promovido Pela AJA Forte 11/12/2025</h3>
-                </div>            
-            </div>
+  <!-- PAIN POINTS -->
+  <section class="pain-section">
+    <div class="pain-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">O problema</span>
+        <h2 class="fade-up">Seu escritório <span class="gold">invisível</span> na internet?</h2>
+        <p class="fade-up">A maioria dos advogados excelentes não consegue atrair clientes porque não tem presença digital estratégica.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Sem autoridade online</h4>
+            <p>Clientes em potencial pesquisam no Google e não encontram seu nome — vão direto para o concorrente.</p>
+          </div>
         </div>
-        <section class="estrelas">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </section>
-    </section>
-    <!-- TESTIMONIALS -->
-    <!--
-    <section class="ponteiros">
-        <h1>Como funciona nosso processo?</h1>
-        <div class="linha" >
-            <img src="imgs/linha.png" id="linha" alt="Linhas"/>
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Dependência de indicação</h4>
+            <p>Quando o marketing é só o boca a boca, o fluxo de clientes fica imprevisível e fora do seu controle.</p>
+          </div>
         </div>
-        <div class="cards-container">
-            <ul class="cards" style="--items: 6;">
-                <li style="--i: 0;">
-                    <input type="radio" id="item-0" name="gallery-item">
-                    <label for="item-0">1°</label>
-                    <h2>Início</h2>
-                    <p>Primeiramente vamos alinhas nossas espectativas e apresentar resultados e cases concretos.</p>
-                </li>
-                <li style="--i: 1;">
-                    <input type="radio" id="item-1" name="gallery-item">
-                    <label for="item-1">2°</label>
-                    <h2>Plano</h2>
-                    <p>Por meio de análise mercado determinamos a melhor praça e a melhor plataforma para investir em anúncios</p>
-                </li>
-                <li style="--i: 2;">
-                    <input type="radio" id="item-2" name="gallery-item">
-                    <label for="item-2">3°</label>
-                    <h2>Início das Campanhas</h2>
-                    <p>Começamos o "start" nas campanhas de tráfego. </p>
-                </li>
-                <li style="--i: 3;">
-                    <input type="radio" id="item-3" name="gallery-item">
-                    <label for="item-3">4°</label>
-                    <h2>Avaliação</h2>
-                    <p>Esse proceso se dá início ao final da priemira semana. Fazemos a menssuaração dos dados obtidos elaboramos os melhores caminhos para um bom desempenho. Nessa fase chacamos também o cliente a nível comercial. Pois boas campanhas não podem suprir um problema de atendimento</p>
-                </li>
-                <li style="--i: 4;">
-                    <input type="radio" id="item-4" name="gallery-item">
-                    <label for="item-4">5°</label>
-                    <h2>Escalonamento</h2>
-                    <p>Depois do pente fino da fase anterior temos a validação do tipo de comunicação ideal para lidar com a "persona" escolhida.</p>
-                </li>
-                <li style="--i: 5;">
-                    <input type="radio" id="item-5" name="gallery-item">
-                    <label for="item-5">6°</label>
-                    <h2>Encerramento de contrato</h2>
-                    <p>Após um mês, caso o cliente não sinto que obteve um bom resultado, poderá pedir encerramento do contrato sem custos adicionais.</p>
-                </li>
-            </ul>
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Perdido no digital</h4>
+            <p>Google Ads, SEO, redes sociais, conteúdo... São tantos canais que sem estratégia vira dinheiro jogado fora.</p>
+          </div>
         </div>
-    </section>-->
-    <!--<section class="prova_social">
-        <div class="center_provas">
-            <div class="prova esquerda" style="--i:0s" id="esquerda">
-                <h2 class="titulo">Veja o resultado na prática</h2>
-                <div class="linha" >
-                    <img src="imgs/linha.png" id="linha" alt="Linhas"/>
-                </div>
-                <p class="titulo2">Junte-se a vários empreendedores que já conquistaram o controle total das finanças de suas empresas de forma simples e eficiente, e impulsione seu negócio para o próximo nível</p>
-                <a id="target" href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Agende sua Consultoria Gratuita</a>
-            </div>
-            <div class="comentarios" style="--i:0s">
-                <div class="container_comentarios">
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario1.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario2.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario3.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario4.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario5.png">
-                        </div>
-                    </div>     
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario1.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario2.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario3.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario4.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario5.png">
-                        </div>
-                    </div>  
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario1.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario2.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario3.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario4.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario5.png">
-                        </div>
-                    </div>  
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario1.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario2.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario3.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario4.png">
-                        </div>
-                    </div>
-                    <div class="comentario cima" style="--i:0s" id="cima">
-                        <div class="content">
-                            <img src="comentarios/comentario5.png">
-                        </div>
-                    </div>  
-                </div>
-            </div>
+        <div class="pain-item fade-in fade-up">
+          <div class="pain-icon">✖</div>
+          <div>
+            <h4>Medo do julgamento da OAB</h4>
+            <p>Muitos advogados travam por não saber o que é permitido — mas existe marketing jurídico ético e eficaz.</p>
+          </div>
         </div>
-    </section>
-    -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-            <!--<div id="themis1"></div>-->
-            <div class="cta-box animate-on-scroll">
-                <h2 class="animate-on-scroll">Pronto para Transformar seu Escritório?</h2>
-                <p class="animate-on-scroll">Agende agora uma consultoria estratégica gratuita de 30 minutos com nossos especialistas em marketing jurídico. Vamos analisar seu caso e mostrar exatamente como podemos ajudar você a captar mais clientes com o melhor custo-benefício.</p>
-                <a href="https://wa.me/5588994446520?text=a" class="hero-btn animate-on-scroll"> <i class="fab fa-whatsapp"></i>Quero minha Consultoria Grátis</a>
-            </div>
-        </div>
-    </section>
-    <section class="section-video">
-        <div class="section-title">
-            <h2 class="animate-on-scroll"">Histórias de quem <span style="color: var(--secondary);"">já transformou</span> seus resultados</h2>
-            <p class="animate-on-scroll">Depoimentos em vídeo de clientes reais</p>
-        </div>
+      </div>
+      <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary"><i class="fa-brands fa-whatsapp"></i>Nós temos a solução</a>
+    </div>
+  </section>
 
-        <div class="videos-container">
-            <!-- Vídeo 1 -->
-            <div class="video-card animate-on-scroll">
-                <div class="video-preview">
-                    <video class="img" preload="metadata" poster="thumbnail3.jpg">
-                        <source src="depoimento-camila.mp4" type="video/mp4">
-                        <source src="depoimento-camila.webm" type="video/webm">
-                        Seu navegador não suporta vídeo.
-                    </video>
-                    <div class="play-icon">▶</div>
-                </div>
-                <div class="video-content">
-                    <div class="client">
-                        <div class="avatar">AP</div>
-                        <div class="client-info">
-                            <h4>Ana Paula</h4>
-                            <span>E-commerce · 45 dias</span>
-                        </div>
-                    </div>
-                    <p class="testimonial">“Saí de R$ 5k para R$ 22k por mês. O método funciona do zero.”</p>
-                    <div class="result">📈 +340% em vendas</div>
-                </div>
-            </div>
-
-            <!-- Vídeo 2 -->
-            <div class="video-card animate-on-scroll">
-                <div class="video-preview">
-                    <img src="https://placehold.co/400x220/1e293b/ffffff?text=Rafael+Lima" alt="Thumb">
-                    <div class="play-icon">▶</div>
-                </div>
-                <div class="video-content">
-                    <div class="client">
-                        <div class="avatar">RL</div>
-                        <div class="client-info">
-                            <h4>Rafael Lima</h4>
-                            <span>Marketing Digital · 2 meses</span>
-                        </div>
-                    </div>
-                    <p class="testimonial">“Nunca vi um suporte tão bom. Os vídeos mostram tudo passo a passo.”</p>
-                    <div class="result">⭐ Avaliação 5/5</div>
-                </div>
-            </div>
-
-            <!-- Vídeo 3 -->
-            <div class="video-card animate-on-scroll">
-                <div class="video-preview">
-                    <img src="https://placehold.co/400x220/1e293b/ffffff?text=Camila+Santos" alt="Thumb">
-                    <div class="play-icon">▶</div>
-                </div>
-                <div class="video-content">
-                    <div class="client">
-                        <div class="avatar">CS</div>
-                        <div class="client-info">
-                            <h4>Camila Santos</h4>
-                            <span>Infoprodutora · 30 dias</span>
-                        </div>
-                    </div>
-                    <p class="testimonial">“Consegui lançar meu primeiro curso em 2 semanas. Recomendo demais!”</p>
-                    <div class="result">🚀 Lançamento em 14 dias</div>
-                </div>
-            </div>
+  <!-- SERVICES -->
+  <section class="services-section" id="servicos">
+    <div class="services-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">Serviços</span>
+        <h2 class="fade-up">O que entregamos para <span class="gold">escalar</span> seu escritório</h2>
+        <p class="fade-up">Estratégias completas dentro das normas da OAB para transformar seu escritório em uma referência digital.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+          </div>
+          <h4>SEO Jurídico</h4>
+          <p>Posicione seu site nas primeiras posições do Google para termos que seus clientes pesquisam.</p>
         </div>
-
-        <div class="verified">
-            <div class="verified-item">✓ Depoimentos verificados</div>
-            <div class="verified-item">🎥 +2.300 vídeos de clientes</div>
-            <div class="verified-item">🏆 Nota 4,9/5 (Google)</div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"></path></svg>
+          </div>
+          <h4>Google Ads</h4>
+          <p>Campanhas otimizadas para captar clientes no momento exato em que buscam um advogado.</p>
         </div>
-    </section>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="m8 21 4-4 4 4"></path></svg>
+          </div>
+          <h4>Redes Sociais</h4>
+          <p>Conteúdo estratégico que constrói autoridade e gera conexão com seu público alvo.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          </div>
+          <h4>Conteúdo &amp; Copy</h4>
+          <p>Artigos, posts e páginas escritas por especialistas que entendem do marketing jurídico.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+          </div>
+          <h4>Landing Pages</h4>
+          <p>Páginas de alta conversão otimizadas para transformar visitantes em clientes reais.</p>
+        </div>
+        <div class="service-card fade-in fade-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4>Consultoria Premium</h4>
+          <p>Acompanhamento personalizado com análise de métricas e ajustes estratégicos contínuos.</p>
+        </div>
+      </div>
+      <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary fade-up"><i class="fa-brands fa-whatsapp"></i>Consulta gratuita!</a>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="method-section" id="metodo">
+    <div class="method-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">Método</span>
+        <h2 class="fade-up">Como <span class="gold">funciona</span> nossa assessoria</h2>
+        <p class="fade-up">Um processo claro e estruturado para levar seu escritório do zero ao resultado consistente.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">1</div>
+          <h4>Diagnóstico &amp; Estratégia</h4>
+          <p>Analisamos seu escritório, concorrentes e mercado para desenhar uma estratégia sob medida.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">2</div>
+          <h4>Posicionamento Digital</h4>
+          <p>Construímos sua presença online — site profissional, redes sociais, Google Meu Negócio e mais.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">3</div>
+          <h4>Aquisição de Clientes</h4>
+          <p>Ativamos campanhas de tráfego pago e orgânico para gerar contatos qualificados todos os dias.</p>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot">4</div>
+          <h4>Otimização &amp; Escala</h4>
+          <p>Monitoramos, testamos e refinamos continuamente para maximizar o ROI do seu investimento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="areas-section">
+    <div class="areas-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline fade-up">Áreas de atuação</span>
+        <h2 class="fade-up">Experiência em diversas <span class="gold">áreas do Direito</span></h2>
+        <p class="fade-up">Já assessoramos escritórios das mais variadas especialidades jurídicas.</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-tag fade-up">Direito Trabalhista</div>
+        <div class="area-tag fade-up">Direito de Família</div>
+        <div class="area-tag fade-up">Direito Previdenciário</div>
+        <div class="area-tag fade-up">Direito Criminal</div>
+        <div class="area-tag fade-up">Direito Civil</div>
+        <div class="area-tag fade-up">Direito Empresarial</div>
+        <div class="area-tag fade-up">Direito Tributário</div>
+        <div class="area-tag fade-up">Direito do Consumidor</div>
+        <div class="area-tag fade-up">Direito Imobiliário</div>
+        <div class="area-tag fade-up">Direito Médico</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF / VIDEOS -->
+  <section class="social-proof" id="depoimentos">
+    <div class="section-header fade-in visible">
+      <span class="overline fade-up">Depoimentos</span>
+      <h2 class="fade-up">Quem confia na <span class="gold">JurisGrouted</span> fala</h2>
+      <p class="fade-up">Veja o que advogados de diferentes áreas dizem sobre os resultados que alcançaram com nossa assessoria.</p>
+    </div>
+
+    <div class="videos-grid fade-up">
+      <!-- Video 1 -->
+      <div class="video-card fade-in visible">
+        <div class="video-wrapper" data-video="">
+          <video src="prova-social.webm" preload="metadata" playsinline=""></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <h4>Dra. Mabel</h4>
+          <span class="role">Advogado Previdenciarista — RJ</span>
+          <p class="result">"Em 3 meses, triplicamos nossos contatos qualificados. O investimento se pagou nos primeiros 15 dias"</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card fade-in visible">
+        <div class="video-wrapper" data-video="">
+          <video src="prova-social2.webm" preload="metadata" playsinline=""></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <h4>Dr. Carlos</h4>
+          <span class="role">Advogado Previdenciarista — MG</span>
+          <p class="result">"Finalmente entendi como o marketing jurídico funciona. Hoje tenho agenda cheia e clientes que me procuram."</p>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card fade-in visible">
+        <div class="video-wrapper" data-video="">
+          <video src="prova-social3.webm" preload="metadata" playsinline=""></video>
+          <div class="play-overlay">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <h4>Dr. Pedro</h4>
+          <span class="role">Advogado Trabalhista - CE</span>
+          <p class="result">"Antes a Nossa captação de clientes era toda baseada em indicação. Agora temos um fluxo contínuo de clientes. "</p>
+        </div>
+      </div>
+    </div>
+    <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary fade-up"><i class="fa-brands fa-whatsapp"></i>Junte-se a Eles!</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-inner">
+      <div class="section-header fade-in visible">
+        <span class="overline">Dúvidas</span>
+        <h2>Perguntas <span class="gold">frequentes</span></h2>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Marketing jurídico é permitido pela OAB?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim! O marketing informativo é autorizado pelo Código de Ética da OAB. Nosso trabalho é garantir que toda estratégia esteja 100% em conformidade com as normas vigentes.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Em quanto tempo vejo resultados?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Com Google Ads, os primeiros contatos podem vir em 48 horas. Para SEO e orgânico, os resultados consistentes surgem entre 60 e 120 dias.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Qual o investimento mínimo para começar?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Trabalhamos com planos a partir de R$ 1.500/mês para gestão de marketing, além do investimento direto em anúncios — que você controla totalmente.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question">
+          Vocês trabalham com quais áreas do Direito?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Todas. Atuamos com escritórios de diversas áreas: trabalhista, família, previdenciário, criminal, civil, tributário e muito mais.</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-in visible">
+        <button class="faq-question active">
+          A assessoria é 100% online?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer open">
+          <p>Sim, atendemos advogados em todo o Brasil. As reuniões, relatórios e acompanhamentos são feitos de forma remota com total eficiência.</p>
+        </div>
+      </div>
+    </div>
     
-    <section class="simulador">
-        <div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-        </div >
-        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;" class="container">
-            <h1 style="text-align: center;">Simule seu investimento</h1>
-            <p style="padding: 10px 0px;">Preencha o formulário com base na situação do seu escritório.</p>
-            <div class="etapas">
-                <p id="p1">Passo 1</p>
-                <p id="p2">Passo 2</p>
-                <p id="p3">Passo 3</p>
-            </div>
-            <div class="fazes">
-                <div class="mudando">
-                    <div id="passo1" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
-                        <p style="font-weight: bold;">1 - Investimento e segmento</p>
-                        <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-                            <div class="inputs">
-                                <p>Acessoria (R$/Mês)</p>
-                                <input onchange="mudar_acessoria(event.target.value)" placeholder="R$ 2.000,00" value="R$1.500,00" />
-                            </div>
-                            <div class="inputs">
-                                <p>Tráfego (R$/Mês)</p>
-                                <input onchange="mudar_trafego(event.target.value)" placeholder="R$ 5.000,00" value="R$1.500,00" />
-                            </div>
-                            <div class="inputs">
-                                <p>Tempo (meses)</p>
-                                <input onchange="mudar_tempo(event.target.value)" placeholder="6" value="6" />
-                            </div>
-                            <div class="inputs">
-                                <p>Segmento (Área de atuação)</p>
-                                <select onchange="mudar_segmento(event.target.value)">
-                                    <option>PREVIDENCIÁRIO</option>
-                                    <option>BANCÁRIO</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="botoes">
-                            <button class="prev">Voltar</button>
-                            <button onclick="passo2()" class="next">Próximo</button>
-                        </div>
-                    </div>
-                    <div id="passo2" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
-                        <p style="font-weight: bold;">2 - Métricas</p>
-                        <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-                            <div class="inputs">
-                                <p>CPL (R$)</p>
-                                <input onchange="mudar_cpl(event.target.value)" placeholder="25,00" value="25,00" />
-                            </div>
-                            <div class="inputs">
-                                <p>Conversão (%)</p>
-                                <input onchange="mudar_conversao(event.target.value)" placeholder="25" value="25" />
-                            </div>
-                            <div class="inputs">
-                                <p>Ticket (R$)</p>
-                                <input onchange="mudar_ticket(event.target.value)" placeholder="800,00" value="800,00" />
-                            </div>
-                            <div class="inputs">
-                                <p>Margem de Contribuição (%)</p>
-                                <input onchange="mudar_margem(event.target.value)" placeholder="60" value="60" />
-                            </div>
-                        </div>
-                        <div class="botoes">
-                            <button onclick="passo1()" class="prev">Voltar</button>
-                            <button onclick="passo3()" class="next">Próximo</button>
-                        </div>
-                    </div>
-                    <div id="passo3" style="width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
-                        <p style="font-weight: bold;">3 - Revisão</p>
-                        <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-                            <div class="rev">
-                                <p style="color: rgb(141, 141, 141);">Custo Periodo</p>
-                                <div>
-                                    <p>Acessoria:</p>
-                                    <p></p>
-                                </div>
-                                <div>
-                                    <p>Tréfego:</p>
-                                    <p></p>
-                                </div>
-                                <div>
-                                    <p>Tempo:</p>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="rev">
-                                <p style="color: rgb(141, 141, 141);">Métricas</p>
-                                <div>
-                                    <p>CPL:</p>
-                                    <p></p>
-                                </div>
-                                <div>
-                                    <p>Conversão:</p>
-                                    <p></p>
-                                </div>
-                                <div>
-                                    <p>Ticket:</p>
-                                    <p>Margem de Contribuição</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="botoes">
-                            <button onclick="passo2()" class="prev">Voltar</button>
-                            <button onclick="" class="next">Limpar</button>
-                            <button onclick="" class="next">Calcular</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="fixo">
-                    <h3>Projeto</h3>
-                    <div style="display: flex; justify-content: flex-start;">
-                        <p>Retorno</p>
-                        <p id="roi">--</p>
-                    </div>
-                    <div style="display: flex; justify-content: flex-start;">
-                        <p>Faturamento Líquido</p>
-                        <p id="faturamento">--</p>
-                    </div>
-                    <div class="blocos">
-                        <div>
-                            <p class="titulo">CUSTOS TOTAIS</p>
-                            <P class="valor">--</P>
-                        </div>
-                        <div>
-                            <p class="titulo">LEADS(PERÍODO)</p>
-                            <P class="valor">--</P>
-                        </div>
-                        <div>
-                            <p class="titulo">CONTRATOS</p>
-                            <P class="valor">--</P>
-                        </div>
-                    </div>
-                    <div class="blocos">
-                        <div>
-                            <p class="titulo">FATURAMENTO BRUTO</p>
-                            <P class="valor">--</P>
-                        </div>
-                        <div>
-                            <p class="titulo">FATURAMENTO X TEMPO</p>
-                            <P class="valor">--</P>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer id="contato">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column animate-on-scroll">
-                    <h3>Juris Grouted</h3>
-                    <p>Especialistas em marketing digital para o mercado jurídico. Transformamos escritórios de advocacia em máquinas de captação de clientes.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column animate-on-scroll">
-                    <h3>Serviços</h3>
-                    <ul>
-                        <li><a href="#">Gestão de tráfego Pago</a></li>
-                        <li><a href="#">Posicionamento digital</a></li>
-                        <li><a href="#">Automação</a></li>
-                        <li><a href="#">Controladoria Jurídica</a></li>
-                        <li><a href="#">CRM</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column animate-on-scroll">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> (85) 98912-5995</li>
-                        <li><i class="fas fa-envelope"></i> comercial@jurisgrouted.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Ceará - CE</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 Juris Grouted Marketing Jurídico. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
-            }
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contato">
+    <div class="cta-inner fade-in visible">
+      <h2>Pronto para colocar seu escritório no <span class="gold">próximo nível</span>?</h2>
+      <p>Agende uma conversa gratuita e descubra como podemos atrair mais clientes qualificados para sua advocacia.</p>
+      <a href="https://wa.me/5511930535329?text=Ol%C3%A1%2C%20sou%20advogado(a)%20e%20gostaria%20de%20melhorar%20meus%20resultados" target="_blank" class="btn-primary 5511930535329"><i class="fa-brands fa-whatsapp"></i>Falar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="logo">JurisGrouted</div>
+    <p>Assessoria de Marketing Jurídico — Todos os direitos reservados © 2026</p>
+  </footer>
+
+  <script>
+    // ── MOBILE MENU ──
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
-    </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
-    <script type="text/javascript">
-        VanillaTilt.init(document.querySelectorAll(".card"), {
-            max: 25,
-            speed: 650
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+
+    // ── ANIMATED COUNTERS ──
+    const counters = document.querySelectorAll('.stat-number[data-target]');
+    let countersStarted = new Set();
+
+    function animateCounter(el) {
+      if (countersStarted.has(el)) return;
+      countersStarted.add(el);
+
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 2000;
+      const startTime = performance.now();
+
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+
+      function tick(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutExpo(progress);
+        const current = Math.floor(easedProgress * target);
+
+        el.textContent = current + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(tick);
+        }
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+    // ── FAQ ACCORDION ──
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        btn.classList.toggle('active');
+        answer.classList.toggle('open');
+
+        document.querySelectorAll('.faq-question').forEach(other => {
+          if (other !== btn) {
+            other.classList.remove('active');
+            other.nextElementSibling.classList.remove('open');
+          }
         });
-        
-        //It also supports NodeList
-        VanillaTilt.init(document.querySelectorAll(".card"));
-        var classes = document.querySelectorAll(".card");
+      });
+    });
 
+    // ── VIDEO PLAYER ──
+    const videoWrappers = document.querySelectorAll('[data-video]');
 
-        var acessoria = 0;
-        var trafego =0;
-        var tempo = 0;
-        var segmento = "";
-        var cpl =0;
-        var conversao = 0;
-        var ticket = 0;
-        var margem = 0;
-        function mudar_acessoria(e){
-            //acessoria = v
-            console.log(e)
+    function stopAllVideos() {
+      videoWrappers.forEach(wrapper => {
+        const video = wrapper.querySelector('video');
+        const overlay = wrapper.querySelector('.play-overlay');
+        video.pause();
+        overlay.classList.remove('hidden');
+      });
+    }
+
+    videoWrappers.forEach(wrapper => {
+      const video = wrapper.querySelector('video');
+      const overlay = wrapper.querySelector('.play-overlay');
+
+      wrapper.addEventListener('click', () => {
+        if (video.paused) {
+          stopAllVideos();
+          video.play();
+          overlay.classList.add('hidden');
+        } else {
+          video.pause();
+          overlay.classList.remove('hidden');
         }
-        function mudar_trafego(v){
-            trafego = v
-        }
-        function mudar_tempo(v){
-            tempo = v
-        }
-        function mudar_segmento(v){
-            segmento = v
-        }
-        function mudar_cpl(v){
-            cpl = v
-        }
-        function mudar_conversao(v){
-            conversao = v
-        }
-        function mudar_ticket(v){
-            ticket = v
-        }
-        function mudar_margem(v){
-            margem = v
-        }
-        function passo1(){
-            var passo1 = document.getElementById("passo1");
-            var passo2 = document.getElementById("passo2");
-            var passo3 = document.getElementById("passo3");
+      });
 
-            var p1 = document.getElementById("p1");
-            var p2 = document.getElementById("p2");
-            var p3 = document.getElementById("p3");
+      video.addEventListener('ended', () => {
+        overlay.classList.remove('hidden');
+      });
+    });
+  </script>
 
-            p1.className = "show";
-            p2.className = "";
-            p3.className = "";
 
-            passo1.style.display = "flex";
-            passo2.style.display = "none";
-            passo3.style.display = "none";
-        }
-        function passo2(){
-            var passo1 = document.getElementById("passo1");
-            var passo2 = document.getElementById("passo2");
-            var passo3 = document.getElementById("passo3");
-
-            var p1 = document.getElementById("p1");
-            var p2 = document.getElementById("p2");
-            var p3 = document.getElementById("p3");
-
-            p1.className = "";
-            p2.className = "show";
-            p3.className = "";
-
-            passo1.style.display = "none";
-            passo2.style.display = "flex";
-            passo3.style.display = "none";
-        }
-        function passo3(){
-            var passo1 = document.getElementById("passo1");
-            var passo2 = document.getElementById("passo2");
-            var passo3 = document.getElementById("passo3");
-
-            var p1 = document.getElementById("p1");
-            var p2 = document.getElementById("p2");
-            var p3 = document.getElementById("p3");
-            
-            p1.className = "";
-            p2.className = "";
-            p3.className = "show";
-
-            passo1.style.display = "none";
-            passo2.style.display = "none";
-            passo3.style.display = "flex";
-        }
-    </script>
-    <script type="module">
-        // To allow for importing the .gltf file
-        // Animação ao rolar a página
-        document.addEventListener('DOMContentLoaded', function() {
-            // Observador de elementos para animação
-            // Configuração inicial da cena
-            // Selecionar todos os elementos para animar
-            passo1();
-            const slides = document.querySelectorAll('.slide');
-            slides.forEach(slide => {
-            slide.addEventListener('click', () => {
-                clearActiveClasses();
-                slide.classList.add('active');
-            });
-            });
-
-            function clearActiveClasses() {
-            slides.forEach(slide => {
-                slide.classList.remove('active')
-            });
-            }
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-            
-            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-            elementsToAnimate.forEach(el => observer.observe(el));
-            
-
-            
-            // Animar elementos do CTA box separadamente
-            const ctaBox = document.querySelector('.cta-box');
-            if (ctaBox) {
-                const ctaElements = ctaBox.querySelectorAll('.animate-on-scroll');
-                const ctaObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-
-                            ctaElements.forEach((el, index) => {
-                                setTimeout(() => {
-                                    el.classList.add('animate');
-                                }, index * 200);
-                            });
-                        }
-                    });
-                });
-                ctaObserver.observe(ctaBox);
-            }
-            const total = 7; // Defina o número total que você deseja contar
-            let count = 0;
-
-            const total_feedbacks = 879000; // Defina o número total que você deseja contar
-            let count_feedbacks = 0;
-
-            const total_satisfeitos = 97; // Defina o número total que você deseja contar
-            let count_satisfeitos = 0;
-
-            function contadores(){
-                const numero = document.getElementById('numero1');
-
-                if (numero !== null){
-                    const intervalo = setInterval(() => {
-                            if (count < total) {
-                                count=count+1;
-                                numero.textContent ='+'+ count;
-                            } else {
-                                clearInterval(intervalo);
-                            }    
-                        
-                    }, 300);
-                }
-                const numero_feedbacks = document.getElementById('numero2');
-                if(numero_feedbacks !== null){
-                    const intervalo_feedbacks = setInterval(() => {
-                        if (count_feedbacks < total_feedbacks) {
-                            count_feedbacks=count_feedbacks+77;
-                            numero_feedbacks.textContent ='+R$ '+ count_feedbacks+",00";
-                        } else {
-                            clearInterval(intervalo_feedbacks);
-                        }    
-                    }, 1);
-                }
-                const numero_satisfeitos = document.getElementById('numero3');
-
-                if(numero_satisfeitos !== null){
-                    const intervalo_satisfeitos = setInterval(() => {
-                        if (count_satisfeitos < total_satisfeitos) {
-                            count_satisfeitos=count_satisfeitos+1;
-                            numero_satisfeitos.textContent =count_satisfeitos+ "%";
-                        } else {
-                            clearInterval(intervalo_satisfeitos);
-                        }    
-                    }, 130);
-                }
-            }
-            contadores()
-            const numeros = [ 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2, 3, 4, 5, 2,4, 5, 2, 3, 4, 5, 2, 3, 4, 5,1, 2, 3, 4, 5, 2, 2, 3, 4, 5,1, 2, 3, 4, 5,1, 2,1, 2, 3, 4, 5, 2,4, 5,1, 2, 3, 4, 5];
-            const quadrados = numeros.map(num => num * num);
-            const classes = [
-                "fa-solid fa-dollar-sign",
-                "fa-solid fa-phone",
-                "fa-solid fa-bitcoin-sign",
-                "fa-solid fa-brazilian-real-sign",
-                "fa-solid fa-rocket"
-            ];
-            // Seleciona a lista no HTML
-            const lista = document.querySelector('.icones');
-
-            // Adiciona os quadrados na lista com um valor aleatório para --i
-            quadrados.forEach(quadrado => {
-                const li = document.createElement('i');
-                const randomClass = classes[Math.floor(Math.random() * classes.length)];
-                li.className = randomClass
-
-                // Gera um número aleatório entre 1 e 100
-                const randomValue = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
-
-                // Define a variável CSS --i
-                li.style.setProperty('--i', randomValue / 70); // Ajusta para estar entre 0 e 1 para opacidade
-
-                lista.appendChild(li);
-            });
-            const radios = document.querySelectorAll('input[name="gallery-item"]');
-            let currentIndex = 0;
-
-            // Função para alternar para o próximo radio
-            function nextRadio() {
-                radios[currentIndex].checked = false; // Desmarca o atual (opcional)
-                currentIndex = (currentIndex + 1) % radios.length; // Vai para o próximo, reinicia no fim
-                radios[currentIndex].checked = true; // Marca o novo
-            }
-
-            // Marca o primeiro como ativo ao iniciar (caso não esteja)
-            radios[currentIndex].checked = true;
-
-            // Executa a cada 3 segundos (3000 milissegundos)
-            setInterval(nextRadio, 3000);
-            // Frases para o carrossel
-        });
-
-        import * as THREE from 'three';
-        import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
-
-        // Aguardar o DOM estar completamente carregado
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM carregado, iniciando Three.js...');
-            
-            const container = document.getElementById('themis');
-            if (!container) {
-                console.error('Div #themis não encontrada!');
-                return;
-            }
-            
-            // Criar cena
-            const scene = new THREE.Scene();
-            scene.background = new THREE.Color(0x050b1a);
-            scene.fog = new THREE.FogExp2(0x050b1a, 0.005);
-
-            // Criar câmera
-            const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
-            camera.position.set(0, 1.5, 4);
-            camera.lookAt(0, 1, 0);
-
-            // Criar renderizador
-            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-            renderer.setSize(container.clientWidth, container.clientHeight);
-            renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.shadowMap.enabled = true;
-            container.appendChild(renderer.domElement);
-
-            // Iluminação
-            const ambientLight = new THREE.AmbientLight(0x2a2a3e, 0.5);
-            scene.add(ambientLight);
-            
-            const mainLight = new THREE.DirectionalLight(0xfff5e6, 1.2);
-            mainLight.position.set(3, 5, 2);
-            mainLight.castShadow = true;
-            mainLight.shadow.mapSize.width = 1024;
-            mainLight.shadow.mapSize.height = 1024;
-            scene.add(mainLight);
-            
-            const fillLight = new THREE.PointLight(0x4466aa, 0.4);
-            fillLight.position.set(-2, 2, 3);
-            scene.add(fillLight);
-            
-            const rimLight = new THREE.PointLight(0xffaa66, 0.5);
-            rimLight.position.set(1, 2, -2);
-            scene.add(rimLight);
-            
-            // Chão sutil
-            const gridHelper = new THREE.GridHelper(8, 20, 0x4466aa, 0x224466);
-            gridHelper.position.y = -0.8;
-            gridHelper.material.transparent = true;
-            gridHelper.material.opacity = 0.25;
-            scene.add(gridHelper);
-            
-            // Estrelas de fundo
-            const starGeometry = new THREE.BufferGeometry();
-            const starCount = 1500;
-            const starPositions = new Float32Array(starCount * 3);
-            for (let i = 0; i < starCount; i++) {
-                starPositions[i*3] = (Math.random() - 0.5) * 200;
-                starPositions[i*3+1] = (Math.random() - 0.5) * 100;
-                starPositions[i*3+2] = (Math.random() - 0.5) * 60 - 30;
-            }
-            starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
-            const starMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.05, transparent: true, opacity: 0.5 });
-            const stars = new THREE.Points(starGeometry, starMaterial);
-            scene.add(stars);
-            
-            // Variáveis do modelo
-            let currentModel = null;
-            let targetRotationY = 0;
-            let currentRotationY = 0;
-            
-            // Criar modelo substituto (fallback)
-            function createFallbackThemis() {
-                const group = new THREE.Group();
-                
-                // Pedestal
-                const pedestalGeo = new THREE.CylinderGeometry(0.9, 1.0, 0.25, 8);
-                const pedestalMat = new THREE.MeshStandardMaterial({ color: 0xaa8866, metalness: 0.4, roughness: 0.6 });
-                const pedestal = new THREE.Mesh(pedestalGeo, pedestalMat);
-                pedestal.position.y = -0.85;
-                pedestal.castShadow = true;
-                group.add(pedestal);
-                
-                // Corpo
-                const bodyGeo = new THREE.CylinderGeometry(0.55, 0.65, 1.3, 12);
-                const bodyMat = new THREE.MeshStandardMaterial({ color: 0xeeddcc, metalness: 0.1, roughness: 0.4 });
-                const body = new THREE.Mesh(bodyGeo, bodyMat);
-                body.position.y = -0.1;
-                body.castShadow = true;
-                group.add(body);
-                
-                // Cabeça
-                const headGeo = new THREE.SphereGeometry(0.42, 32, 32);
-                const headMat = new THREE.MeshStandardMaterial({ color: 0xffddbb, metalness: 0.05, roughness: 0.3 });
-                const head = new THREE.Mesh(headGeo, headMat);
-                head.position.y = 0.7;
-                head.castShadow = true;
-                group.add(head);
-                
-                // Venda
-                const blindfoldGeo = new THREE.BoxGeometry(0.75, 0.12, 0.08);
-                const blindfoldMat = new THREE.MeshStandardMaterial({ color: 0xcc8866 });
-                const blindfold = new THREE.Mesh(blindfoldGeo, blindfoldMat);
-                blindfold.position.set(0, 0.72, 0.44);
-                blindfold.castShadow = true;
-                group.add(blindfold);
-                
-                return group;
-            }
-            
-            // Carregar modelo FBX
-            const modelPath = './themis.fbx'; // ALTERE PARA O CAMINHO DO SEU ARQUIVO
-            const loader = new FBXLoader();
-            
-            loader.load(modelPath, 
-                (fbx) => {
-                    console.log('✓ Modelo FBX carregado com sucesso!');
-                    currentModel = fbx;
-                    currentModel.scale.set(0.01, 0.01, 0.01);
-                    currentModel.position.set(0, -0.6, 0);
-                    currentModel.traverse((child) => {
-                        if (child.isMesh) {
-                            child.castShadow = true;
-                        }
-                    });
-                    scene.add(currentModel);
-                },
-                (xhr) => {
-                    console.log(`Carregando: ${Math.floor((xhr.loaded / xhr.total) * 100)}%`);
-                },
-                (error) => {
-                    console.error('Erro ao carregar FBX:', error);
-                    console.log('Usando modelo substituto...');
-                    currentModel = createFallbackThemis();
-                    scene.add(currentModel);
-                }
-            );
-            
-            // Controle de rotação pelo scroll
-            function updateRotationFromScroll() {
-                const scrollY = window.scrollY;
-                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-                const progress = maxScroll > 0 ? scrollY / maxScroll : 0;
-                targetRotationY = progress * Math.PI * 4; // 2 voltas completas
-            }
-            
-            window.addEventListener('scroll', updateRotationFromScroll);
-            updateRotationFromScroll();
-            
-            // Loop de animação
-            function animate() {
-                const lerpFactor = 0.12;
-                currentRotationY += (targetRotationY - currentRotationY) * lerpFactor;
-                
-                if (currentModel) {
-                    currentModel.rotation.y = currentRotationY;
-                }
-                
-                stars.rotation.y += 0.0003;
-                stars.rotation.x += 0.0002;
-                camera.lookAt(0, 0.8, 0);
-                renderer.render(scene, camera);
-                requestAnimationFrame(animate);
-            }
-            
-            animate();
-            
-            // Redimensionamento
-            window.addEventListener('resize', () => {
-                const width = container.clientWidth;
-                const height = container.clientHeight;
-                camera.aspect = width / height;
-                camera.updateProjectionMatrix();
-                renderer.setSize(width, height);
-            });
-            
-            setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
-        });
-    </script>
-
-</body>
-</html>
+</body></html>

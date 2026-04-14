@@ -1262,6 +1262,14 @@ background: linear-gradient(180deg, #000346 0%, #FF0000 100%), linear-gradient(5
             overflow: hidden;
         }
 
+        .video-preview video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+
         .video-preview .img {
             width: 100%;
             height: 100%;
@@ -1285,6 +1293,8 @@ background: linear-gradient(180deg, #000346 0%, #FF0000 100%), linear-gradient(5
             color: #1e293b;
             transition: all 0.2s;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 2;
+            pointer-events: none;
         }
 
         .video-preview:hover .play-icon {
